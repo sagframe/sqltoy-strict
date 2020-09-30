@@ -19,6 +19,7 @@
 	
 	<tasks dist="../../src/main/java" encoding="UTF-8">
 		<task active="true" author="zhongxuchen" include="^SQLTOY_\w+" datasource="quickstart" swagger-model="false">
+			<entity package="${project.package}.quickstart.entity" substr="Sqltoy"/>
 			<vo package="${project.package}.quickstart.vo" substr="Sqltoy" name="#{subName}VO" />
 		</task>
 	</tasks>
