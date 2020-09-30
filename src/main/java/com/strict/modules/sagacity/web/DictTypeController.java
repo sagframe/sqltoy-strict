@@ -17,9 +17,9 @@ import io.swagger.annotations.Api;
  * @version v1.0, Date:2020-9-30
  * @modify 2020-9-30,修改说明
  */
-@Api(tags = "用户信息管理")
+@Api(tags = "数据字典信息维护")
 @RestController
 @RequestMapping("dictInfo")
-public class DictInfoController extends BaseController{
-	 
+public class DictTypeController extends BaseController {
+
 }
