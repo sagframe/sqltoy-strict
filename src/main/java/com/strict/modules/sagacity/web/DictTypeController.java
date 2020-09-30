@@ -19,7 +19,7 @@ import io.swagger.annotations.Api;
  */
 @Api(tags = "数据字典信息维护")
 @RestController
-@RequestMapping("dictInfo")
+@RequestMapping("dictType")
 public class DictTypeController extends BaseController {
 
 }
