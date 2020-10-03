@@ -76,7 +76,7 @@
 * 常规配置，核心要点:sqlResourcesDir 是路径名,多个路径用逗号分隔,不要填错
 
 ```
-#完整路径:spring.sqltoy
+#完整路径:spring.sqltoy 
 spring:
    sqltoy:
         # 多个路径用逗号分隔(这里要注意是路径,sqltoy会自动向下寻找以sql.xml结尾的文件,不要写成classpath:com/**/*.sql.xml)
@@ -95,7 +95,7 @@ spring:
         #reservedWords: maxvalue,minvalue
 ```
 
-* 最简单配置(注意:spring.sqltoy开头)
+* 最简单配置(注意注意注意是:spring.sqltoy. 开头)
 
 ```
 #完整路径:spring.sqltoy
