@@ -7,8 +7,8 @@ import java.io.Serializable;
 
 /**
  * @project sqltoy-strict
- * @description 请在此说明类的功能
- * @author zhong
+ * @description 提供一个统一的返回结果对象(一般打包到公司级框架中,这里只是演示)
+ * @author zhongxuchen
  * @version v1.0, Date:2020-9-30
  * @modify 2020-9-30,修改说明
  */
@@ -18,10 +18,19 @@ public class Result<T> implements Serializable {
 	 */
 	private static final long serialVersionUID = -316607953346586682L;
 
-	private String resultCode;
+	/**
+	 * 返回码
+	 */
+	private String code;
 
+	/**
+	 * 返回消息
+	 */
 	private String message;
 
+	/**
+	 * 返回内容体
+	 */
 	private T data;
 
 	public Result() {
@@ -29,17 +38,17 @@ public class Result<T> implements Serializable {
 	}
 
 	/**
-	 * @return the resultCode
+	 * @return the code
 	 */
-	public String getResultCode() {
-		return resultCode;
+	public String getCode() {
+		return code;
 	}
 
 	/**
-	 * @param resultCode the resultCode to set
+	 * @param code the code to set
 	 */
-	public Result<T> setResultCode(String resultCode) {
-		this.resultCode = resultCode;
+	public Result<T> setCode(String code) {
+		this.code = code;
 		return this;
 	}
 

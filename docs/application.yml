@@ -1,7 +1,7 @@
 spring:
     sqltoy:
         # 多个路径用逗号分隔(请务必看仔细)
-        sqlResourcesDir: classpath:com/sqltoy/quickstart
+        sqlResourcesDir: classpath:com/strict/modules
         # 默认为classpath:sqltoy-translate.xml，一致则可以不用设置
         translateConfig: classpath:sqltoy-translate.xml
         # 跨数据库函数自适配功能,默认是关闭的,可以设置:default,com.xxx.GroupConcat
