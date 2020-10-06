@@ -3,13 +3,16 @@
  */
 package com.strict.config;
 
+import org.springframework.context.annotation.Configuration;
+
 /**
  * @project sqltoy-strict
  * @description 请在此说明类的功能
- * @author zhong 
+ * @author zhong
  * @version v1.0, Date:2020-9-30
  * @modify 2020-9-30,修改说明
-*/
+ */
+@Configuration
 public class DataSourceConfig {
 
 }
