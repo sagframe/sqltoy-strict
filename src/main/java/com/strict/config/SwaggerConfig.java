@@ -18,7 +18,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 /**
  * @project sqltoy-strict
  * @description 配置swagger3.0
- * @author zhong
+ * @author zhongxuchen
  * @version v1.0, Date:2020-9-30
  * @modify 2020-9-30,修改说明
  */
