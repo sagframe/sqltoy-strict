@@ -3,9 +3,11 @@
  */
 package com.strict.modules.system.service.impl;
 
+import org.sagacity.sqltoy.model.PaginationModel;
 import org.springframework.stereotype.Service;
 
 import com.strict.modules.system.service.StaffInfoService;
+import com.strict.modules.system.vo.StaffInfoVO;
 
 /**
  * @project sqltoy-strict
@@ -16,5 +18,11 @@ import com.strict.modules.system.service.StaffInfoService;
 */
 @Service("staffInfoService")
 public class StaffInfoServiceImpl implements StaffInfoService {
+
+	@Override
+	public PaginationModel<StaffInfoVO> page(PaginationModel pageModel, StaffInfoVO staffInfoVO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

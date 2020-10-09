@@ -4,11 +4,11 @@
 package com.strict.modules.system.vo;
 
 import java.io.Serializable;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.time.LocalDate;
-import java.sql.Blob;
-import java.time.LocalDateTime;
 
 /**
  * @project sqltoy-strict

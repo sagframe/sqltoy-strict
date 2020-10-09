@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sqltoy xmlns="https://www.sagframe.com/schema/sqltoy"
+	xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://www.sagframe.com/schema/sqltoy https://www.sagframe.com/schema/sqltoy/sqltoy.xsd">
+	<!-- 快速分页和分页优化演示 -->
+	<sql id="sys_findStaffInfo">
+		<!-- 分页优化器,通过缓存实现查询条件一致的情况下在一定时间周期内缓存总记录数量，从而无需每次查询总记录数量 -->
+		<!-- alive-max:最大存放多少个不同查询条件的总记录量; alive-seconds:查询条件记录量存活时长(比如120秒,超过阀值则重新查询) -->
+		<page-optimize alive-max="100" alive-seconds="120" />
+		<!-- 安全脱敏,type提供了几种标准的脱敏模式 mask-rate:脱敏比例 mask-code:自定义脱敏掩码,一般***,默认为*** 
+			head-size:前面保留多长字符 tail-size:尾部保留多长字符 -->
+		<secure-mask columns="address" type="address" />
+		<secure-mask columns="tel_no" type="tel" />
+		<value>
+			<![CDATA[
+			select t1.*,t2.ORGAN_NAME 
+			-- @fast() 实现先分页取10条(具体数量由pageSize确定),然后再进行管理
+			from @fast(select t.*
+			           from sys_staff_info t
+			           where t.STATUS=1 
+			             #[and t.STAFF_NAME like :staffName] 
+			           order by t.ENTRY_DATE desc
+			            ) t1 
+			left join sys_organ_info t2 on  t1.organ_id=t2.ORGAN_ID
+				]]>
+		</value>
+		<!-- 这里为极特殊情况下提供了自定义count-sql来实现极致性能优化 -->
+		<!-- <count-sql></count-sql> -->
+	</sql>
+
+
+
+</sqltoy>
