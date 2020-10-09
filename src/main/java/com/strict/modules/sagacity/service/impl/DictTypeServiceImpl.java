@@ -28,6 +28,7 @@ public class DictTypeServiceImpl implements DictTypeService {
 	@Transactional
 	public void save(DictTypeVO dictTypeVO) {
 		DictType dictType = sqlToyDao.convertType(dictTypeVO, DictType.class);
+		dictType.setStatus(1);
 		sqlToyDao.save(dictType);
 	}
 

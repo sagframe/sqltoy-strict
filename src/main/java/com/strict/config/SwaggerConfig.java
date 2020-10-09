@@ -24,7 +24,7 @@ import springfox.documentation.spring.web.plugins.Docket;
  */
 @Configuration
 public class SwaggerConfig {
-	//Swagger的访问路径为:port/swagger-ui/index.html 或port/swagger-ui
+	//Swagger的访问路径为:port/swagger-ui/index.html 或port/swagger-ui/
 	@Bean
 	public Docket createRestApi() {
 		return new Docket(DocumentationType.OAS_30).apiInfo(apiInfo()).select()
