@@ -31,4 +31,10 @@ public class DictTypeServiceImpl implements DictTypeService {
 		sqlToyDao.save(dictType);
 	}
 
+	@Override
+	public boolean isUnique(DictTypeVO dictTypeVO) {
+		DictType dictType = sqlToyDao.convertType(dictTypeVO, DictType.class);
+		return sqlToyDao.isUnique(dictType, "dictType");
+	}
+
 }

@@ -18,7 +18,7 @@ import io.swagger.annotations.ApiOperation;
 
 /**
  * @project sqltoy-strict
- * @description 请在此说明类的功能
+ * @description 字典类别维护演示
  * @author zhongxuchen
  * @version v1.0, Date:2020-9-30
  * @modify 2020-9-30,修改说明
@@ -33,6 +33,18 @@ public class DictTypeController extends BaseController {
 	@ApiOperation("新增字典分类信息")
 	@RequestMapping(ADD)
 	public Result save(@RequestBody DictTypeVO dictTypeVO) {
+		try {
+			dictTypeService.save(dictTypeVO);
+			return super.success(dictTypeVO);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return super.failure("新建字典分类:{} 发生错误!", dictTypeVO.getDictType());
+	}
+
+	@ApiOperation("验证字典分类是否已经存在")
+	@RequestMapping(ISUNIQUE)
+	public Result isUnique(@RequestBody DictTypeVO dictTypeVO) {
 		try {
 			dictTypeService.save(dictTypeVO);
 			return super.success(dictTypeVO);
