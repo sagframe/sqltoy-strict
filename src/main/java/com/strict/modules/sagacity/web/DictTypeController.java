@@ -46,11 +46,11 @@ public class DictTypeController extends BaseController {
 	@RequestMapping(ISUNIQUE)
 	public Result isUnique(@RequestBody DictTypeVO dictTypeVO) {
 		try {
-			dictTypeService.save(dictTypeVO);
-			return super.success(dictTypeVO);
+			boolean result = dictTypeService.isUnique(dictTypeVO);
+			return super.success(result);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return super.failure("新建字典分类:{} 发生错误!", dictTypeVO.getDictType());
+		return super.failure("字典分类:{} 唯一性校验错误!", dictTypeVO.getDictType());
 	}
 }
