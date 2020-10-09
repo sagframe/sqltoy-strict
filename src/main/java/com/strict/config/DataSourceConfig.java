@@ -39,9 +39,9 @@ public class DataSourceConfig {
 	 * 
 	 * @return
 	 */
-//	@Bean(name = "secondary")
-//	@ConfigurationProperties(prefix = "spring.datasource.secondary")
-//	public static DataSource dataSourceSkyline() {
-//		return DruidDataSourceBuilder.create().build();
-//	}
+	@Bean(name = "secondary")
+	@ConfigurationProperties(prefix = "spring.datasource.secondary")
+	public static DataSource dataSourceSkyline() {
+		return DruidDataSourceBuilder.create().build();
+	}
 }
