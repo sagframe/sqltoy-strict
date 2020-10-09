@@ -10,8 +10,8 @@ import com.strict.framework.model.Result;
 
 /**
  * @project sqltoy-strict
- * @description 请在此说明类的功能
- * @author zhong
+ * @description 演示公司级框架提供web基础类，便于在其中进行扩展提供web层常用工具封装
+ * @author zhongxuchen
  * @version v1.0, Date:2020-9-30
  * @modify 2020-9-30,修改说明
  */
@@ -25,7 +25,7 @@ public class BaseController {
 	 * @return
 	 */
 	protected <T> Result<T> success(T data) {
-		return new Result<T>().setMessage("成功").setResultCode("1").setData(data);
+		return new Result<T>().setMessage("成功").setCode("1").setData(data);
 	}
 
 	/**
@@ -35,6 +35,6 @@ public class BaseController {
 	 * @return
 	 */
 	protected <T> Result<T> failure(String errorMsg) {
-		return new Result<T>().setMessage(errorMsg).setResultCode("0");
+		return new Result<T>().setMessage(errorMsg).setCode("0");
 	}
 }
