@@ -11,6 +11,8 @@ import org.sagacity.sqltoy.config.annotation.SqlToyEntity;
 import org.sagacity.sqltoy.callback.SelectFields;
 import org.sagacity.sqltoy.config.annotation.Id;
 import org.sagacity.sqltoy.config.annotation.Column;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.time.LocalDate;
 import java.sql.Blob;
 import java.time.LocalDateTime;
@@ -21,6 +23,7 @@ import java.time.LocalDateTime;
  * @version 1.0.0
  * Table: sys_staff_info,Remark:员工信息表  
  */
+@ApiModel(value="StaffInfo",description="员工信息表")
 @SqlToyEntity
 @Entity(tableName="sys_staff_info",pk_constraint="PRIMARY")
 public class StaffInfo implements Serializable {
@@ -34,6 +37,7 @@ public class StaffInfo implements Serializable {
 	 * jdbcType:VARCHAR
 	 * 员工ID
 	 */
+	@ApiModelProperty(value="员工ID",allowEmptyValue=false)
 	@Id(strategy="generator",generator="org.sagacity.sqltoy.plugins.id.DefaultIdGenerator")
 	@Column(name="STAFF_ID",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String staffId;
@@ -42,6 +46,7 @@ public class StaffInfo implements Serializable {
 	 * jdbcType:VARCHAR
 	 * 工号
 	 */
+	@ApiModelProperty(value="工号",allowEmptyValue=false)
 	@Column(name="STAFF_CODE",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String staffCode;
 	
@@ -49,6 +54,7 @@ public class StaffInfo implements Serializable {
 	 * jdbcType:VARCHAR
 	 * 姓名
 	 */
+	@ApiModelProperty(value="姓名",allowEmptyValue=false)
 	@Column(name="STAFF_NAME",length=30L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String staffName;
 	
@@ -56,6 +62,7 @@ public class StaffInfo implements Serializable {
 	 * jdbcType:VARCHAR
 	 * 部门
 	 */
+	@ApiModelProperty(value="部门",allowEmptyValue=false)
 	@Column(name="ORGAN_ID",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String organId;
 	
@@ -63,6 +70,7 @@ public class StaffInfo implements Serializable {
 	 * jdbcType:CHAR
 	 * 性别
 	 */
+	@ApiModelProperty(value="性别",allowEmptyValue=false)
 	@Column(name="SEX_TYPE",length=1L,type=java.sql.Types.CHAR,nullable=false)
 	private String sexType;
 	
@@ -70,6 +78,7 @@ public class StaffInfo implements Serializable {
 	 * jdbcType:DATE
 	 * 出生日期
 	 */
+	@ApiModelProperty(value="出生日期",allowEmptyValue=true)
 	@Column(name="BIRTHDAY",length=10L,type=java.sql.Types.DATE,nullable=true)
 	private LocalDate birthday;
 	
@@ -77,6 +86,7 @@ public class StaffInfo implements Serializable {
 	 * jdbcType:DATE
 	 * 入职日期
 	 */
+	@ApiModelProperty(value="入职日期",allowEmptyValue=false)
 	@Column(name="ENTRY_DATE",length=10L,type=java.sql.Types.DATE,nullable=false)
 	private LocalDate entryDate;
 	
@@ -84,6 +94,7 @@ public class StaffInfo implements Serializable {
 	 * jdbcType:DATE
 	 * 离职日期
 	 */
+	@ApiModelProperty(value="离职日期",allowEmptyValue=true)
 	@Column(name="TERM_DATE",length=10L,type=java.sql.Types.DATE,nullable=true)
 	private LocalDate termDate;
 	
@@ -91,6 +102,7 @@ public class StaffInfo implements Serializable {
 	 * jdbcType:LONGBLOB
 	 * 照片
 	 */
+	@ApiModelProperty(value="照片",allowEmptyValue=true)
 	@Column(name="PHOTO",length=2147483647L,type=java.sql.Types.BLOB,nullable=true)
 	private byte[] photo;
 	
@@ -98,6 +110,7 @@ public class StaffInfo implements Serializable {
 	 * jdbcType:VARCHAR
 	 * 国家
 	 */
+	@ApiModelProperty(value="国家",allowEmptyValue=true)
 	@Column(name="COUNTRY",length=10L,type=java.sql.Types.VARCHAR,nullable=true)
 	private String country;
 	
@@ -105,6 +118,7 @@ public class StaffInfo implements Serializable {
 	 * jdbcType:VARCHAR
 	 * 籍贯
 	 */
+	@ApiModelProperty(value="籍贯",allowEmptyValue=true)
 	@Column(name="CENSUS_REGISTER",length=150L,type=java.sql.Types.VARCHAR,nullable=true)
 	private String censusRegister;
 	
@@ -112,6 +126,7 @@ public class StaffInfo implements Serializable {
 	 * jdbcType:VARCHAR
 	 * 家庭地址
 	 */
+	@ApiModelProperty(value="家庭地址",allowEmptyValue=true)
 	@Column(name="ADDRESS",length=250L,type=java.sql.Types.VARCHAR,nullable=true)
 	private String address;
 	
@@ -119,6 +134,7 @@ public class StaffInfo implements Serializable {
 	 * jdbcType:VARCHAR
 	 * 邮箱
 	 */
+	@ApiModelProperty(value="邮箱",allowEmptyValue=true)
 	@Column(name="EMAIL",length=100L,type=java.sql.Types.VARCHAR,nullable=true)
 	private String email;
 	
@@ -126,6 +142,7 @@ public class StaffInfo implements Serializable {
 	 * jdbcType:VARCHAR
 	 * 移动电话
 	 */
+	@ApiModelProperty(value="移动电话",allowEmptyValue=true)
 	@Column(name="TEL_NO",length=20L,type=java.sql.Types.VARCHAR,nullable=true)
 	private String telNo;
 	
@@ -133,6 +150,7 @@ public class StaffInfo implements Serializable {
 	 * jdbcType:VARCHAR
 	 * 岗位
 	 */
+	@ApiModelProperty(value="岗位",allowEmptyValue=true)
 	@Column(name="POST",length=20L,type=java.sql.Types.VARCHAR,nullable=true)
 	private String post;
 	
@@ -140,6 +158,7 @@ public class StaffInfo implements Serializable {
 	 * jdbcType:VARCHAR
 	 * 职位级别
 	 */
+	@ApiModelProperty(value="职位级别",allowEmptyValue=true)
 	@Column(name="POST_GRADE",length=20L,type=java.sql.Types.VARCHAR,nullable=true)
 	private String postGrade;
 	
@@ -147,6 +166,7 @@ public class StaffInfo implements Serializable {
 	 * jdbcType:VARCHAR
 	 * 创建人
 	 */
+	@ApiModelProperty(value="创建人",allowEmptyValue=false)
 	@Column(name="CREATE_BY",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String createBy;
 	
@@ -154,6 +174,7 @@ public class StaffInfo implements Serializable {
 	 * jdbcType:DATETIME
 	 * 创建时间
 	 */
+	@ApiModelProperty(value="创建时间",allowEmptyValue=false)
 	@Column(name="CREATE_TIME",length=19L,type=java.sql.Types.DATE,nullable=false)
 	private LocalDateTime createTime;
 	
@@ -161,6 +182,7 @@ public class StaffInfo implements Serializable {
 	 * jdbcType:VARCHAR
 	 * 最后修改人
 	 */
+	@ApiModelProperty(value="最后修改人",allowEmptyValue=false)
 	@Column(name="UPDATE_BY",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String updateBy;
 	
@@ -168,6 +190,7 @@ public class StaffInfo implements Serializable {
 	 * jdbcType:DATETIME
 	 * 最后修改时间
 	 */
+	@ApiModelProperty(value="最后修改时间",allowEmptyValue=false)
 	@Column(name="UPDATE_TIME",length=19L,type=java.sql.Types.DATE,nullable=false)
 	private LocalDateTime updateTime;
 	
@@ -175,6 +198,7 @@ public class StaffInfo implements Serializable {
 	 * jdbcType:DECIMAL
 	 * 状态
 	 */
+	@ApiModelProperty(value="状态",allowEmptyValue=false)
 	@Column(name="STATUS",length=1L,defaultValue="1",type=java.sql.Types.INTEGER,nullable=false)
 	private Integer status;
 	

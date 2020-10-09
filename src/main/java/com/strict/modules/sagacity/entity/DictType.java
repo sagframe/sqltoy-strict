@@ -11,6 +11,8 @@ import org.sagacity.sqltoy.config.annotation.SqlToyEntity;
 import org.sagacity.sqltoy.callback.SelectFields;
 import org.sagacity.sqltoy.config.annotation.Id;
 import org.sagacity.sqltoy.config.annotation.Column;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.time.LocalDateTime;
 
 import org.sagacity.sqltoy.config.annotation.OneToMany;
@@ -21,6 +23,7 @@ import com.strict.modules.sagacity.entity.DictDetail;
  * @version 1.0.0
  * Table: sag_dict_type,Remark:字典分类表  
  */
+@ApiModel(value="DictType",description="字典分类表")
 @SqlToyEntity
 @Entity(tableName="sag_dict_type",pk_constraint="PRIMARY")
 public class DictType implements Serializable {
@@ -34,6 +37,7 @@ public class DictType implements Serializable {
 	 * jdbcType:VARCHAR
 	 * 字典类型代码
 	 */
+	@ApiModelProperty(value="字典类型代码",allowEmptyValue=false)
 	@Id(strategy="generator",generator="org.sagacity.sqltoy.plugins.id.DefaultIdGenerator")
 	@Column(name="DICT_TYPE",length=50L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String dictType;
@@ -42,6 +46,7 @@ public class DictType implements Serializable {
 	 * jdbcType:VARCHAR
 	 * 字典类型名称
 	 */
+	@ApiModelProperty(value="字典类型名称",allowEmptyValue=false)
 	@Column(name="DICT_TYPE_NAME",length=100L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String dictTypeName;
 	
@@ -49,6 +54,7 @@ public class DictType implements Serializable {
 	 * jdbcType:VARCHAR
 	 * 说明
 	 */
+	@ApiModelProperty(value="说明",allowEmptyValue=true)
 	@Column(name="COMMENTS",length=500L,type=java.sql.Types.VARCHAR,nullable=true)
 	private String comments;
 	
@@ -56,6 +62,7 @@ public class DictType implements Serializable {
 	 * jdbcType:DECIMAL
 	 * 显示顺序
 	 */
+	@ApiModelProperty(value="显示顺序",allowEmptyValue=false)
 	@Column(name="SHOW_INDEX",length=8L,defaultValue="1",type=java.sql.Types.INTEGER,nullable=false)
 	private Integer showIndex;
 	
@@ -63,6 +70,7 @@ public class DictType implements Serializable {
 	 * jdbcType:VARCHAR
 	 * 创建人
 	 */
+	@ApiModelProperty(value="创建人",allowEmptyValue=false)
 	@Column(name="CREATE_BY",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String createBy;
 	
@@ -70,6 +78,7 @@ public class DictType implements Serializable {
 	 * jdbcType:DATETIME
 	 * 创建时间
 	 */
+	@ApiModelProperty(value="创建时间",allowEmptyValue=false)
 	@Column(name="CREATE_TIME",length=19L,type=java.sql.Types.DATE,nullable=false)
 	private LocalDateTime createTime;
 	
@@ -77,6 +86,7 @@ public class DictType implements Serializable {
 	 * jdbcType:VARCHAR
 	 * 最后修改人
 	 */
+	@ApiModelProperty(value="最后修改人",allowEmptyValue=false)
 	@Column(name="UPDATE_BY",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String updateBy;
 	
@@ -84,6 +94,7 @@ public class DictType implements Serializable {
 	 * jdbcType:DATETIME
 	 * 最后修改时间
 	 */
+	@ApiModelProperty(value="最后修改时间",allowEmptyValue=false)
 	@Column(name="UPDATE_TIME",length=19L,type=java.sql.Types.DATE,nullable=false)
 	private LocalDateTime updateTime;
 	
@@ -91,6 +102,7 @@ public class DictType implements Serializable {
 	 * jdbcType:DECIMAL
 	 * 状态
 	 */
+	@ApiModelProperty(value="状态",allowEmptyValue=false)
 	@Column(name="STATUS",length=1L,defaultValue="1",type=java.sql.Types.INTEGER,nullable=false)
 	private Integer status;
 	

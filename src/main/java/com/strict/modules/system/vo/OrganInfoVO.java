@@ -4,6 +4,8 @@
 package com.strict.modules.system.vo;
 
 import java.io.Serializable;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.time.LocalDateTime;
 
 /**
@@ -11,6 +13,7 @@ import java.time.LocalDateTime;
  * @version 1.0.0
  * ,Remark:机构信息表  
  */
+@ApiModel(value="OrganInfoVO",description="机构信息表")
 public class OrganInfoVO implements Serializable {
 	
 	/**
@@ -19,71 +22,85 @@ public class OrganInfoVO implements Serializable {
 	private static final long serialVersionUID = 484724793842815100L;
 	
 /*---begin-auto-generate-don't-update-this-area--*/	
+	@ApiModelProperty(value="机构ID",allowEmptyValue=false)
 	/**
 	 * 机构ID
 	 */
 	private String organId;
 	
+	@ApiModelProperty(value="机构名称",allowEmptyValue=false)
 	/**
 	 * 机构名称
 	 */
 	private String organName;
 	
+	@ApiModelProperty(value="机构代码",allowEmptyValue=false)
 	/**
 	 * 机构代码
 	 */
 	private String organCode;
 	
+	@ApiModelProperty(value="成本中心代码",allowEmptyValue=true)
 	/**
 	 * 成本中心代码
 	 */
 	private String costNo;
 	
+	@ApiModelProperty(value="父机构ID",allowEmptyValue=false)
 	/**
 	 * 父机构ID
 	 */
 	private String organPid;
 	
+	@ApiModelProperty(value="节点路径",allowEmptyValue=true)
 	/**
 	 * 节点路径
 	 */
 	private String nodeRoute;
 	
+	@ApiModelProperty(value="节点等级",allowEmptyValue=true)
 	/**
 	 * 节点等级
 	 */
 	private Integer nodeLevel;
 	
+	@ApiModelProperty(value="是否叶子节点",allowEmptyValue=true)
 	/**
 	 * 是否叶子节点
 	 */
 	private Integer isLeaf;
 	
+	@ApiModelProperty(value="显示顺序",allowEmptyValue=false)
 	/**
 	 * 显示顺序
 	 */
 	private Integer showIndex;
 	
+	@ApiModelProperty(value="创建人",allowEmptyValue=false)
 	/**
 	 * 创建人
 	 */
 	private String createBy;
 	
+	@ApiModelProperty(value="创建时间",allowEmptyValue=false)
 	/**
 	 * 创建时间
 	 */
 	private LocalDateTime createTime;
 	
+	@ApiModelProperty(value="最后修改人",allowEmptyValue=false)
 	/**
 	 * 最后修改人
 	 */
 	private String updateBy;
 	
+	@ApiModelProperty(value="最后修改时间",allowEmptyValue=false)
 	/**
 	 * 最后修改时间
 	 */
 	private LocalDateTime updateTime;
 	
+	@ApiModelProperty(value="状态",allowEmptyValue=false)
 	/**
 	 * 状态
 	 */

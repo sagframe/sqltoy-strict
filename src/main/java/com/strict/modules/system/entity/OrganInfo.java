@@ -11,6 +11,8 @@ import org.sagacity.sqltoy.config.annotation.SqlToyEntity;
 import org.sagacity.sqltoy.callback.SelectFields;
 import org.sagacity.sqltoy.config.annotation.Id;
 import org.sagacity.sqltoy.config.annotation.Column;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.time.LocalDateTime;
 
 
@@ -19,6 +21,7 @@ import java.time.LocalDateTime;
  * @version 1.0.0
  * Table: sys_organ_info,Remark:机构信息表  
  */
+@ApiModel(value="OrganInfo",description="机构信息表")
 @SqlToyEntity
 @Entity(tableName="sys_organ_info",pk_constraint="PRIMARY")
 public class OrganInfo implements Serializable {
@@ -32,6 +35,7 @@ public class OrganInfo implements Serializable {
 	 * jdbcType:VARCHAR
 	 * 机构ID
 	 */
+	@ApiModelProperty(value="机构ID",allowEmptyValue=false)
 	@Id(strategy="generator",generator="org.sagacity.sqltoy.plugins.id.DefaultIdGenerator")
 	@Column(name="ORGAN_ID",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String organId;
@@ -40,6 +44,7 @@ public class OrganInfo implements Serializable {
 	 * jdbcType:VARCHAR
 	 * 机构名称
 	 */
+	@ApiModelProperty(value="机构名称",allowEmptyValue=false)
 	@Column(name="ORGAN_NAME",length=100L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String organName;
 	
@@ -47,6 +52,7 @@ public class OrganInfo implements Serializable {
 	 * jdbcType:VARCHAR
 	 * 机构代码
 	 */
+	@ApiModelProperty(value="机构代码",allowEmptyValue=false)
 	@Column(name="ORGAN_CODE",length=20L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String organCode;
 	
@@ -54,6 +60,7 @@ public class OrganInfo implements Serializable {
 	 * jdbcType:VARCHAR
 	 * 成本中心代码
 	 */
+	@ApiModelProperty(value="成本中心代码",allowEmptyValue=true)
 	@Column(name="COST_NO",length=20L,type=java.sql.Types.VARCHAR,nullable=true)
 	private String costNo;
 	
@@ -61,6 +68,7 @@ public class OrganInfo implements Serializable {
 	 * jdbcType:VARCHAR
 	 * 父机构ID
 	 */
+	@ApiModelProperty(value="父机构ID",allowEmptyValue=false)
 	@Column(name="ORGAN_PID",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String organPid;
 	
@@ -68,6 +76,7 @@ public class OrganInfo implements Serializable {
 	 * jdbcType:VARCHAR
 	 * 节点路径
 	 */
+	@ApiModelProperty(value="节点路径",allowEmptyValue=true)
 	@Column(name="NODE_ROUTE",length=200L,type=java.sql.Types.VARCHAR,nullable=true)
 	private String nodeRoute;
 	
@@ -75,6 +84,7 @@ public class OrganInfo implements Serializable {
 	 * jdbcType:DECIMAL
 	 * 节点等级
 	 */
+	@ApiModelProperty(value="节点等级",allowEmptyValue=true)
 	@Column(name="NODE_LEVEL",length=1L,type=java.sql.Types.INTEGER,nullable=true)
 	private Integer nodeLevel;
 	
@@ -82,6 +92,7 @@ public class OrganInfo implements Serializable {
 	 * jdbcType:DECIMAL
 	 * 是否叶子节点
 	 */
+	@ApiModelProperty(value="是否叶子节点",allowEmptyValue=true)
 	@Column(name="IS_LEAF",length=1L,type=java.sql.Types.INTEGER,nullable=true)
 	private Integer isLeaf;
 	
@@ -89,6 +100,7 @@ public class OrganInfo implements Serializable {
 	 * jdbcType:DECIMAL
 	 * 显示顺序
 	 */
+	@ApiModelProperty(value="显示顺序",allowEmptyValue=false)
 	@Column(name="SHOW_INDEX",length=8L,defaultValue="1",type=java.sql.Types.INTEGER,nullable=false)
 	private Integer showIndex;
 	
@@ -96,6 +108,7 @@ public class OrganInfo implements Serializable {
 	 * jdbcType:VARCHAR
 	 * 创建人
 	 */
+	@ApiModelProperty(value="创建人",allowEmptyValue=false)
 	@Column(name="CREATE_BY",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String createBy;
 	
@@ -103,6 +116,7 @@ public class OrganInfo implements Serializable {
 	 * jdbcType:DATETIME
 	 * 创建时间
 	 */
+	@ApiModelProperty(value="创建时间",allowEmptyValue=false)
 	@Column(name="CREATE_TIME",length=19L,type=java.sql.Types.DATE,nullable=false)
 	private LocalDateTime createTime;
 	
@@ -110,6 +124,7 @@ public class OrganInfo implements Serializable {
 	 * jdbcType:VARCHAR
 	 * 最后修改人
 	 */
+	@ApiModelProperty(value="最后修改人",allowEmptyValue=false)
 	@Column(name="UPDATE_BY",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String updateBy;
 	
@@ -117,6 +132,7 @@ public class OrganInfo implements Serializable {
 	 * jdbcType:DATETIME
 	 * 最后修改时间
 	 */
+	@ApiModelProperty(value="最后修改时间",allowEmptyValue=false)
 	@Column(name="UPDATE_TIME",length=19L,type=java.sql.Types.DATE,nullable=false)
 	private LocalDateTime updateTime;
 	
@@ -124,6 +140,7 @@ public class OrganInfo implements Serializable {
 	 * jdbcType:DECIMAL
 	 * 状态
 	 */
+	@ApiModelProperty(value="状态",allowEmptyValue=false)
 	@Column(name="STATUS",length=1L,defaultValue="1",type=java.sql.Types.INTEGER,nullable=false)
 	private Integer status;
 	

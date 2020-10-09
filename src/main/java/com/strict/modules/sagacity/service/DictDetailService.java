@@ -11,5 +11,5 @@ package com.strict.modules.sagacity.service;
  * @modify 2020-9-30,修改说明
  */
 public interface DictDetailService {
-
+	
 }

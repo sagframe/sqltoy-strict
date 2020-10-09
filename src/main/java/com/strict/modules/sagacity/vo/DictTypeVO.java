@@ -4,6 +4,8 @@
 package com.strict.modules.sagacity.vo;
 
 import java.io.Serializable;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.time.LocalDateTime;
 
 /**
@@ -11,6 +13,7 @@ import java.time.LocalDateTime;
  * @version 1.0.0
  * ,Remark:字典分类表  
  */
+@ApiModel(value="DictTypeVO",description="字典分类表")
 public class DictTypeVO implements Serializable {
 	
 	/**
@@ -19,46 +22,55 @@ public class DictTypeVO implements Serializable {
 	private static final long serialVersionUID = 426724547793495250L;
 	
 /*---begin-auto-generate-don't-update-this-area--*/	
+	@ApiModelProperty(value="字典类型代码",allowEmptyValue=false)
 	/**
 	 * 字典类型代码
 	 */
 	private String dictType;
 	
+	@ApiModelProperty(value="字典类型名称",allowEmptyValue=false)
 	/**
 	 * 字典类型名称
 	 */
 	private String dictTypeName;
 	
+	@ApiModelProperty(value="说明",allowEmptyValue=true)
 	/**
 	 * 说明
 	 */
 	private String comments;
 	
+	@ApiModelProperty(value="显示顺序",allowEmptyValue=false)
 	/**
 	 * 显示顺序
 	 */
 	private Integer showIndex;
 	
+	@ApiModelProperty(value="创建人",allowEmptyValue=false)
 	/**
 	 * 创建人
 	 */
 	private String createBy;
 	
+	@ApiModelProperty(value="创建时间",allowEmptyValue=false)
 	/**
 	 * 创建时间
 	 */
 	private LocalDateTime createTime;
 	
+	@ApiModelProperty(value="最后修改人",allowEmptyValue=false)
 	/**
 	 * 最后修改人
 	 */
 	private String updateBy;
 	
+	@ApiModelProperty(value="最后修改时间",allowEmptyValue=false)
 	/**
 	 * 最后修改时间
 	 */
 	private LocalDateTime updateTime;
 	
+	@ApiModelProperty(value="状态",allowEmptyValue=false)
 	/**
 	 * 状态
 	 */
