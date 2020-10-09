@@ -16,4 +16,12 @@
 </tasks>
 ```
 
-## 2. 
+## 2. 数据初始化
+* 在mysql中创建strict数据库，并配置src/main/resoruces下面的application.properties
+* 执行src/main/resources/mock/strict_init.sql 完成表结构和数据初始化
+
+## 3. 阅读src/main/java下面com.strict.modules.sagacity 和 system模块下面的代码
+
+## 4. 通过启动StrictApplication进行swagger演示
+* 访问:http://localhost:8080/swagger-ui/ 
+* 可以完成字典分类的维护和唯一性验证，参见:DictTypeController
