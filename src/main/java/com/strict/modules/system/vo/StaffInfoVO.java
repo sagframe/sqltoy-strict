@@ -4,11 +4,11 @@
 package com.strict.modules.system.vo;
 
 import java.io.Serializable;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.time.LocalDate;
+import java.sql.Blob;
+import java.time.LocalDateTime;
 
 /**
  * @project sqltoy-strict
@@ -24,130 +24,130 @@ public class StaffInfoVO implements Serializable {
 	private static final long serialVersionUID = 2999016276055969132L;
 	
 /*---begin-auto-generate-don't-update-this-area--*/	
-	@ApiModelProperty(value="员工ID",allowEmptyValue=false)
 	/**
 	 * 员工ID
 	 */
+	@ApiModelProperty(value="员工ID",allowEmptyValue=false)
 	private String staffId;
 	
-	@ApiModelProperty(value="工号",allowEmptyValue=false)
 	/**
 	 * 工号
 	 */
+	@ApiModelProperty(value="工号",allowEmptyValue=false)
 	private String staffCode;
 	
-	@ApiModelProperty(value="姓名",allowEmptyValue=false)
 	/**
 	 * 姓名
 	 */
+	@ApiModelProperty(value="姓名",allowEmptyValue=false)
 	private String staffName;
 	
-	@ApiModelProperty(value="部门",allowEmptyValue=false)
 	/**
 	 * 部门
 	 */
+	@ApiModelProperty(value="部门",allowEmptyValue=false)
 	private String organId;
 	
-	@ApiModelProperty(value="性别",allowEmptyValue=false)
 	/**
 	 * 性别
 	 */
+	@ApiModelProperty(value="性别",allowEmptyValue=false)
 	private String sexType;
 	
-	@ApiModelProperty(value="出生日期",allowEmptyValue=true)
 	/**
 	 * 出生日期
 	 */
+	@ApiModelProperty(value="出生日期",allowEmptyValue=true)
 	private LocalDate birthday;
 	
-	@ApiModelProperty(value="入职日期",allowEmptyValue=false)
 	/**
 	 * 入职日期
 	 */
+	@ApiModelProperty(value="入职日期",allowEmptyValue=false)
 	private LocalDate entryDate;
 	
-	@ApiModelProperty(value="离职日期",allowEmptyValue=true)
 	/**
 	 * 离职日期
 	 */
+	@ApiModelProperty(value="离职日期",allowEmptyValue=true)
 	private LocalDate termDate;
 	
-	@ApiModelProperty(value="照片",allowEmptyValue=true)
 	/**
 	 * 照片
 	 */
+	@ApiModelProperty(value="照片",allowEmptyValue=true)
 	private byte[] photo;
 	
-	@ApiModelProperty(value="国家",allowEmptyValue=true)
 	/**
 	 * 国家
 	 */
+	@ApiModelProperty(value="国家",allowEmptyValue=true)
 	private String country;
 	
-	@ApiModelProperty(value="籍贯",allowEmptyValue=true)
 	/**
 	 * 籍贯
 	 */
+	@ApiModelProperty(value="籍贯",allowEmptyValue=true)
 	private String censusRegister;
 	
-	@ApiModelProperty(value="家庭地址",allowEmptyValue=true)
 	/**
 	 * 家庭地址
 	 */
+	@ApiModelProperty(value="家庭地址",allowEmptyValue=true)
 	private String address;
 	
-	@ApiModelProperty(value="邮箱",allowEmptyValue=true)
 	/**
 	 * 邮箱
 	 */
+	@ApiModelProperty(value="邮箱",allowEmptyValue=true)
 	private String email;
 	
-	@ApiModelProperty(value="移动电话",allowEmptyValue=true)
 	/**
 	 * 移动电话
 	 */
+	@ApiModelProperty(value="移动电话",allowEmptyValue=true)
 	private String telNo;
 	
-	@ApiModelProperty(value="岗位",allowEmptyValue=true)
 	/**
 	 * 岗位
 	 */
+	@ApiModelProperty(value="岗位",allowEmptyValue=true)
 	private String post;
 	
-	@ApiModelProperty(value="职位级别",allowEmptyValue=true)
 	/**
 	 * 职位级别
 	 */
+	@ApiModelProperty(value="职位级别",allowEmptyValue=true)
 	private String postGrade;
 	
-	@ApiModelProperty(value="创建人",allowEmptyValue=false)
 	/**
 	 * 创建人
 	 */
+	@ApiModelProperty(value="创建人",allowEmptyValue=false)
 	private String createBy;
 	
-	@ApiModelProperty(value="创建时间",allowEmptyValue=false)
 	/**
 	 * 创建时间
 	 */
+	@ApiModelProperty(value="创建时间",allowEmptyValue=false)
 	private LocalDateTime createTime;
 	
-	@ApiModelProperty(value="最后修改人",allowEmptyValue=false)
 	/**
 	 * 最后修改人
 	 */
+	@ApiModelProperty(value="最后修改人",allowEmptyValue=false)
 	private String updateBy;
 	
-	@ApiModelProperty(value="最后修改时间",allowEmptyValue=false)
 	/**
 	 * 最后修改时间
 	 */
+	@ApiModelProperty(value="最后修改时间",allowEmptyValue=false)
 	private LocalDateTime updateTime;
 	
-	@ApiModelProperty(value="状态",allowEmptyValue=false)
 	/**
 	 * 状态
 	 */
+	@ApiModelProperty(value="状态",allowEmptyValue=false)
 	private Integer status;
 	
 	

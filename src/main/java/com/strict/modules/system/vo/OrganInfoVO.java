@@ -22,88 +22,88 @@ public class OrganInfoVO implements Serializable {
 	private static final long serialVersionUID = 484724793842815100L;
 	
 /*---begin-auto-generate-don't-update-this-area--*/	
-	@ApiModelProperty(value="机构ID",allowEmptyValue=false)
 	/**
 	 * 机构ID
 	 */
+	@ApiModelProperty(value="机构ID",allowEmptyValue=false)
 	private String organId;
 	
-	@ApiModelProperty(value="机构名称",allowEmptyValue=false)
 	/**
 	 * 机构名称
 	 */
+	@ApiModelProperty(value="机构名称",allowEmptyValue=false)
 	private String organName;
 	
-	@ApiModelProperty(value="机构代码",allowEmptyValue=false)
 	/**
 	 * 机构代码
 	 */
+	@ApiModelProperty(value="机构代码",allowEmptyValue=false)
 	private String organCode;
 	
-	@ApiModelProperty(value="成本中心代码",allowEmptyValue=true)
 	/**
 	 * 成本中心代码
 	 */
+	@ApiModelProperty(value="成本中心代码",allowEmptyValue=true)
 	private String costNo;
 	
-	@ApiModelProperty(value="父机构ID",allowEmptyValue=false)
 	/**
 	 * 父机构ID
 	 */
+	@ApiModelProperty(value="父机构ID",allowEmptyValue=false)
 	private String organPid;
 	
-	@ApiModelProperty(value="节点路径",allowEmptyValue=true)
 	/**
 	 * 节点路径
 	 */
+	@ApiModelProperty(value="节点路径",allowEmptyValue=true)
 	private String nodeRoute;
 	
-	@ApiModelProperty(value="节点等级",allowEmptyValue=true)
 	/**
 	 * 节点等级
 	 */
+	@ApiModelProperty(value="节点等级",allowEmptyValue=true)
 	private Integer nodeLevel;
 	
-	@ApiModelProperty(value="是否叶子节点",allowEmptyValue=true)
 	/**
 	 * 是否叶子节点
 	 */
+	@ApiModelProperty(value="是否叶子节点",allowEmptyValue=true)
 	private Integer isLeaf;
 	
-	@ApiModelProperty(value="显示顺序",allowEmptyValue=false)
 	/**
 	 * 显示顺序
 	 */
+	@ApiModelProperty(value="显示顺序",allowEmptyValue=false)
 	private Integer showIndex;
 	
-	@ApiModelProperty(value="创建人",allowEmptyValue=false)
 	/**
 	 * 创建人
 	 */
+	@ApiModelProperty(value="创建人",allowEmptyValue=false)
 	private String createBy;
 	
-	@ApiModelProperty(value="创建时间",allowEmptyValue=false)
 	/**
 	 * 创建时间
 	 */
+	@ApiModelProperty(value="创建时间",allowEmptyValue=false)
 	private LocalDateTime createTime;
 	
-	@ApiModelProperty(value="最后修改人",allowEmptyValue=false)
 	/**
 	 * 最后修改人
 	 */
+	@ApiModelProperty(value="最后修改人",allowEmptyValue=false)
 	private String updateBy;
 	
-	@ApiModelProperty(value="最后修改时间",allowEmptyValue=false)
 	/**
 	 * 最后修改时间
 	 */
+	@ApiModelProperty(value="最后修改时间",allowEmptyValue=false)
 	private LocalDateTime updateTime;
 	
-	@ApiModelProperty(value="状态",allowEmptyValue=false)
 	/**
 	 * 状态
 	 */
+	@ApiModelProperty(value="状态",allowEmptyValue=false)
 	private Integer status;
 	
 	
