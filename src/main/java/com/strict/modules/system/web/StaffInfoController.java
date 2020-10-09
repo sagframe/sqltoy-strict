@@ -5,9 +5,9 @@ package com.strict.modules.system.web;
 
 import org.sagacity.sqltoy.model.PaginationModel;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.strict.framework.model.Result;
@@ -34,7 +34,7 @@ public class StaffInfoController extends BaseController {
 
 	@ApiOperation("分页查询员工信息")
 	@RequestMapping(path = SEARCH, method = RequestMethod.POST)
-	public Result save(@RequestBody PaginationModel pageModel, @RequestBody StaffInfoVO staffInfoVO) {
+	public Result search(@RequestParam PaginationModel pageModel, @RequestParam StaffInfoVO staffInfoVO) {
 		try {
 			PaginationModel<StaffInfoVO> result = staffInfoService.page(pageModel, staffInfoVO);
 			return super.success(result);
