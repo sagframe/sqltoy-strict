@@ -26,16 +26,20 @@ public class OrganInfoServiceImpl implements OrganInfoService {
 	@Autowired
 	private SqlToyLazyDao sqlToyDao;
 
+	/**
+	 * 新增机构信息，并通过树结构wrapTreeTable构造节点路径、层级、是否叶子节点
+	 */
 	@Transactional
 	public void save(OrganInfoVO organInfoVO) {
+		//将vo转为pojo
 		OrganInfo organInfo = sqlToyDao.convertType(organInfoVO, OrganInfo.class);
 		sqlToyDao.save(organInfo);
+		//构造节点路径、层级、是否叶子节点标志
 		sqlToyDao.wrapTreeTableRoute(new TreeTableModel(organInfo).pidField("organPid"));
 	}
 
 	@Override
 	public PaginationModel<OrganInfoVO> search(PaginationModel page, OrganInfoVO organInfoVO) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
