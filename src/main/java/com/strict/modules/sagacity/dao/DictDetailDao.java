@@ -29,6 +29,7 @@ public class DictDetailDao extends SqlToyDaoSupport {
 	public List<DictDetailVO> getDictByType(String dictType) {
 		List<DictDetail> dictDetails = findEntity(DictDetail.class,
 				EntityQuery.create().where("dictType=?").values(dictType));
-		return convertType(dictDetails, DictDetailVO.class);
+		// return convertType(dictDetails, DictDetailVO.class);
+		return null;
 	}
 }
