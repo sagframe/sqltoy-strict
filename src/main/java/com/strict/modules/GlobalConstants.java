@@ -23,4 +23,11 @@ public class GlobalConstants {
 		 */
 		public int DISABLED = 0;
 	}
+
+	public interface DictTypes {
+		/**
+		 * 订单状态
+		 */
+		public String ORDER_STATUS = "ORDER_STATUS";
+	}
 }
