@@ -31,7 +31,7 @@ public class DictDetailServiceTest {
 	DictDetailService dictDetailService;
 
 	/**
-	 * @TODO 通过保存机构演示节点路径、节点等级、是否叶子节点等数据的生成
+	 * @TODO 测试获取字典明细数据，演示service、dao完整通路效果
 	 */
 	@Test
 	public void testGetDictByType() {
