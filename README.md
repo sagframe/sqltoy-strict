@@ -6,6 +6,8 @@
 ```xml
 <tasks dist="../../src/main/java" encoding="UTF-8">
 		<task active="true" author="zhongxuchen" include="^SAG_\w+" datasource="quickstart" swagger-model="true">
+		    <!-- entity 默认是包含抽象类的，可以通过 has-abstract="false" 关闭 -->
+		    <!-- entity 分成抽象类和实体类目的在于可以在实体类上做一些属性扩展,便于扩展附加查询属性 -->
 			<entity package="${project.package}.sagacity.entity" substr="Sag" name="#{subName}"/>
 			<vo package="${project.package}.sagacity.vo" substr="Sag" name="#{subName}VO" />
 		</task>
