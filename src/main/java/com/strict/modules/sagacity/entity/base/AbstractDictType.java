@@ -4,18 +4,20 @@
 package com.strict.modules.sagacity.entity.base;
 
 import java.io.Serializable;
-import java.util.List;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
-import org.sagacity.sqltoy.config.annotation.Entity;
+import java.util.List;
+
 import org.sagacity.sqltoy.callback.SelectFields;
-import org.sagacity.sqltoy.config.annotation.Id;
 import org.sagacity.sqltoy.config.annotation.Column;
+import org.sagacity.sqltoy.config.annotation.Entity;
+import org.sagacity.sqltoy.config.annotation.Id;
+import org.sagacity.sqltoy.config.annotation.OneToMany;
+
+import com.strict.modules.sagacity.entity.DictDetail;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.time.LocalDateTime;
-
-import org.sagacity.sqltoy.config.annotation.OneToMany;
-import com.strict.modules.sagacity.entity.DictDetail;
 
 /**
  * @project sqltoy-strict
