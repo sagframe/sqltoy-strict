@@ -18,7 +18,7 @@ import com.strict.modules.system.vo.StaffInfoVO;
 /**
  * @project sqltoy-strict
  * @description 请在此说明类的功能
- * @author zhong
+ * @author zhongxuchen
  * @version v1.0, Date:2020-10-9
  * @modify 2020-10-9,修改说明
  */
