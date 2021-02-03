@@ -23,58 +23,58 @@ public class DictTypeVO implements Serializable {
 	private static final long serialVersionUID = 426724547793495250L;
 	
 /*---begin-auto-generate-don't-update-this-area--*/	
-	/**
+   /**
 	 * 字典类型代码
 	 */
-	@ApiModelProperty(value="字典类型代码",allowEmptyValue=false)
+	@ApiModelProperty(name="DICT_TYPE",value="字典类型代码",allowEmptyValue=false)
 	private String dictType;
 	
-	/**
+   /**
 	 * 字典类型名称
 	 */
-	@ApiModelProperty(value="字典类型名称",allowEmptyValue=false)
+	@ApiModelProperty(name="DICT_TYPE_NAME",value="字典类型名称",allowEmptyValue=false)
 	private String dictTypeName;
 	
-	/**
+   /**
 	 * 说明
 	 */
-	@ApiModelProperty(value="说明",allowEmptyValue=true)
+	@ApiModelProperty(name="COMMENTS",value="说明",allowEmptyValue=true)
 	private String comments;
 	
-	/**
+   /**
 	 * 显示顺序
 	 */
-	@ApiModelProperty(value="显示顺序",allowEmptyValue=false)
+	@ApiModelProperty(name="SHOW_INDEX",value="显示顺序",allowEmptyValue=false)
 	private Integer showIndex;
 	
-	/**
+   /**
 	 * 创建人
 	 */
-	@ApiModelProperty(value="创建人",allowEmptyValue=false)
+	@ApiModelProperty(name="CREATE_BY",value="创建人",allowEmptyValue=false)
 	private String createBy;
 	
-	/**
+   /**
 	 * 创建时间
 	 */
-	@ApiModelProperty(value="创建时间",allowEmptyValue=false)
+	@ApiModelProperty(name="CREATE_TIME",value="创建时间",allowEmptyValue=false)
 	private LocalDateTime createTime;
 	
-	/**
+   /**
 	 * 最后修改人
 	 */
-	@ApiModelProperty(value="最后修改人",allowEmptyValue=false)
+	@ApiModelProperty(name="UPDATE_BY",value="最后修改人",allowEmptyValue=false)
 	private String updateBy;
 	
-	/**
+   /**
 	 * 最后修改时间
 	 */
-	@ApiModelProperty(value="最后修改时间",allowEmptyValue=false)
+	@ApiModelProperty(name="UPDATE_TIME",value="最后修改时间",allowEmptyValue=false)
 	private LocalDateTime updateTime;
 	
-	/**
+   /**
 	 * 状态
 	 */
-	@ApiModelProperty(value="状态",allowEmptyValue=false)
+	@ApiModelProperty(name="STATUS",value="状态",allowEmptyValue=false)
 	private Integer status;
 	
 	

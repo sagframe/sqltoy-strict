@@ -23,46 +23,46 @@ public class DictDetailVO implements Serializable {
 	private static final long serialVersionUID = 8137101015349347912L;
 	
 /*---begin-auto-generate-don't-update-this-area--*/	
-	/**
+   /**
 	 * 字典KEY
 	 */
-	@ApiModelProperty(value="字典KEY",allowEmptyValue=false)
+	@ApiModelProperty(name="DICT_KEY",value="字典KEY",allowEmptyValue=false)
 	private String dictKey;
 	
-	/**
+   /**
 	 * 字典类型代码
 	 */
-	@ApiModelProperty(value="字典类型代码",allowEmptyValue=false)
+	@ApiModelProperty(name="DICT_TYPE",value="字典类型代码",allowEmptyValue=false)
 	private String dictType;
 	
-	/**
+   /**
 	 * 字典值
 	 */
-	@ApiModelProperty(value="字典值",allowEmptyValue=false)
+	@ApiModelProperty(name="DICT_NAME",value="字典值",allowEmptyValue=false)
 	private String dictName;
 	
-	/**
+   /**
 	 * 显示顺序
 	 */
-	@ApiModelProperty(value="显示顺序",allowEmptyValue=false)
+	@ApiModelProperty(name="SHOW_INDEX",value="显示顺序",allowEmptyValue=false)
 	private Integer showIndex;
 	
-	/**
+   /**
 	 * 最后修改人
 	 */
-	@ApiModelProperty(value="最后修改人",allowEmptyValue=false)
+	@ApiModelProperty(name="UPDATE_BY",value="最后修改人",allowEmptyValue=false)
 	private String updateBy;
 	
-	/**
+   /**
 	 * 最后修改时间
 	 */
-	@ApiModelProperty(value="最后修改时间",allowEmptyValue=false)
+	@ApiModelProperty(name="UPDATE_TIME",value="最后修改时间",allowEmptyValue=false)
 	private LocalDateTime updateTime;
 	
-	/**
+   /**
 	 * 状态
 	 */
-	@ApiModelProperty(value="状态",allowEmptyValue=false)
+	@ApiModelProperty(name="STATUS",value="状态",allowEmptyValue=false)
 	private Integer status;
 	
 	
