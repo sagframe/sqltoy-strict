@@ -41,446 +41,447 @@ public class StaffInfoVO implements Serializable {
 		this.organName = organName;
 	}
 
-	/*---begin-auto-generate-don't-update-this-area--*/
-	/**
+	/*---begin-auto-generate-don't-update-this-area--*/	
+   /**
 	 * 员工ID
 	 */
-	@ApiModelProperty(value = "员工ID", allowEmptyValue = false)
+	@ApiModelProperty(name="STAFF_ID",value="员工ID",allowEmptyValue=false)
 	private String staffId;
-
-	/**
+	
+   /**
 	 * 工号
 	 */
-	@ApiModelProperty(value = "工号", allowEmptyValue = false)
+	@ApiModelProperty(name="STAFF_CODE",value="工号",allowEmptyValue=false)
 	private String staffCode;
-
-	/**
+	
+   /**
 	 * 姓名
 	 */
-	@ApiModelProperty(value = "姓名", allowEmptyValue = false)
+	@ApiModelProperty(name="STAFF_NAME",value="姓名",allowEmptyValue=false)
 	private String staffName;
-
-	/**
+	
+   /**
 	 * 部门
 	 */
-	@ApiModelProperty(value = "部门", allowEmptyValue = false)
+	@ApiModelProperty(name="ORGAN_ID",value="部门",allowEmptyValue=false)
 	private String organId;
-
-	/**
+	
+   /**
 	 * 性别
 	 */
-	@ApiModelProperty(value = "性别", allowEmptyValue = false)
+	@ApiModelProperty(name="SEX_TYPE",value="性别",allowEmptyValue=false)
 	private String sexType;
-
-	/**
+	
+   /**
 	 * 出生日期
 	 */
-	@ApiModelProperty(value = "出生日期", allowEmptyValue = true)
+	@ApiModelProperty(name="BIRTHDAY",value="出生日期",allowEmptyValue=true)
 	private LocalDate birthday;
-
-	/**
+	
+   /**
 	 * 入职日期
 	 */
-	@ApiModelProperty(value = "入职日期", allowEmptyValue = false)
+	@ApiModelProperty(name="ENTRY_DATE",value="入职日期",allowEmptyValue=false)
 	private LocalDate entryDate;
-
-	/**
+	
+   /**
 	 * 离职日期
 	 */
-	@ApiModelProperty(value = "离职日期", allowEmptyValue = true)
+	@ApiModelProperty(name="TERM_DATE",value="离职日期",allowEmptyValue=true)
 	private LocalDate termDate;
-
-	/**
+	
+   /**
 	 * 照片
 	 */
-	@ApiModelProperty(value = "照片", allowEmptyValue = true)
+	@ApiModelProperty(name="PHOTO",value="照片",allowEmptyValue=true)
 	private byte[] photo;
-
-	/**
+	
+   /**
 	 * 国家
 	 */
-	@ApiModelProperty(value = "国家", allowEmptyValue = true)
+	@ApiModelProperty(name="COUNTRY",value="国家",allowEmptyValue=true)
 	private String country;
-
-	/**
+	
+   /**
 	 * 籍贯
 	 */
-	@ApiModelProperty(value = "籍贯", allowEmptyValue = true)
+	@ApiModelProperty(name="CENSUS_REGISTER",value="籍贯",allowEmptyValue=true)
 	private String censusRegister;
-
-	/**
+	
+   /**
 	 * 家庭地址
 	 */
-	@ApiModelProperty(value = "家庭地址", allowEmptyValue = true)
+	@ApiModelProperty(name="ADDRESS",value="家庭地址",allowEmptyValue=true)
 	private String address;
-
-	/**
+	
+   /**
 	 * 邮箱
 	 */
-	@ApiModelProperty(value = "邮箱", allowEmptyValue = true)
+	@ApiModelProperty(name="EMAIL",value="邮箱",allowEmptyValue=true)
 	private String email;
-
-	/**
+	
+   /**
 	 * 移动电话
 	 */
-	@ApiModelProperty(value = "移动电话", allowEmptyValue = true)
+	@ApiModelProperty(name="TEL_NO",value="移动电话",allowEmptyValue=true)
 	private String telNo;
-
-	/**
+	
+   /**
 	 * 岗位
 	 */
-	@ApiModelProperty(value = "岗位", allowEmptyValue = true)
+	@ApiModelProperty(name="POST",value="岗位",allowEmptyValue=true)
 	private String post;
-
-	/**
+	
+   /**
 	 * 职位级别
 	 */
-	@ApiModelProperty(value = "职位级别", allowEmptyValue = true)
+	@ApiModelProperty(name="POST_GRADE",value="职位级别",allowEmptyValue=true)
 	private String postGrade;
-
-	/**
+	
+   /**
 	 * 创建人
 	 */
-	@ApiModelProperty(value = "创建人", allowEmptyValue = false)
+	@ApiModelProperty(name="CREATE_BY",value="创建人",allowEmptyValue=false)
 	private String createBy;
-
-	/**
+	
+   /**
 	 * 创建时间
 	 */
-	@ApiModelProperty(value = "创建时间", allowEmptyValue = false)
+	@ApiModelProperty(name="CREATE_TIME",value="创建时间",allowEmptyValue=false)
 	private LocalDateTime createTime;
-
-	/**
+	
+   /**
 	 * 最后修改人
 	 */
-	@ApiModelProperty(value = "最后修改人", allowEmptyValue = false)
+	@ApiModelProperty(name="UPDATE_BY",value="最后修改人",allowEmptyValue=false)
 	private String updateBy;
-
-	/**
+	
+   /**
 	 * 最后修改时间
 	 */
-	@ApiModelProperty(value = "最后修改时间", allowEmptyValue = false)
+	@ApiModelProperty(name="UPDATE_TIME",value="最后修改时间",allowEmptyValue=false)
 	private LocalDateTime updateTime;
-
-	/**
+	
+   /**
 	 * 状态
 	 */
-	@ApiModelProperty(value = "状态", allowEmptyValue = false)
+	@ApiModelProperty(name="STATUS",value="状态",allowEmptyValue=false)
 	private Integer status;
-
+	
+	
 	/**
-	 * @param staffId the staffId to set
+	 *@param staffId the staffId to set
 	 */
 	public StaffInfoVO setStaffId(String staffId) {
-		this.staffId = staffId;
+		this.staffId=staffId;
 		return this;
 	}
-
+		
 	/**
-	 * @return the StaffId
+	 *@return the StaffId
 	 */
 	public String getStaffId() {
-		return this.staffId;
+	    return this.staffId;
 	}
-
+	
 	/**
-	 * @param staffCode the staffCode to set
+	 *@param staffCode the staffCode to set
 	 */
 	public StaffInfoVO setStaffCode(String staffCode) {
-		this.staffCode = staffCode;
+		this.staffCode=staffCode;
 		return this;
 	}
-
+		
 	/**
-	 * @return the StaffCode
+	 *@return the StaffCode
 	 */
 	public String getStaffCode() {
-		return this.staffCode;
+	    return this.staffCode;
 	}
-
+	
 	/**
-	 * @param staffName the staffName to set
+	 *@param staffName the staffName to set
 	 */
 	public StaffInfoVO setStaffName(String staffName) {
-		this.staffName = staffName;
+		this.staffName=staffName;
 		return this;
 	}
-
+		
 	/**
-	 * @return the StaffName
+	 *@return the StaffName
 	 */
 	public String getStaffName() {
-		return this.staffName;
+	    return this.staffName;
 	}
-
+	
 	/**
-	 * @param organId the organId to set
+	 *@param organId the organId to set
 	 */
 	public StaffInfoVO setOrganId(String organId) {
-		this.organId = organId;
+		this.organId=organId;
 		return this;
 	}
-
+		
 	/**
-	 * @return the OrganId
+	 *@return the OrganId
 	 */
 	public String getOrganId() {
-		return this.organId;
+	    return this.organId;
 	}
-
+	
 	/**
-	 * @param sexType the sexType to set
+	 *@param sexType the sexType to set
 	 */
 	public StaffInfoVO setSexType(String sexType) {
-		this.sexType = sexType;
+		this.sexType=sexType;
 		return this;
 	}
-
+		
 	/**
-	 * @return the SexType
+	 *@return the SexType
 	 */
 	public String getSexType() {
-		return this.sexType;
+	    return this.sexType;
 	}
-
+	
 	/**
-	 * @param birthday the birthday to set
+	 *@param birthday the birthday to set
 	 */
 	public StaffInfoVO setBirthday(LocalDate birthday) {
-		this.birthday = birthday;
+		this.birthday=birthday;
 		return this;
 	}
-
+		
 	/**
-	 * @return the Birthday
+	 *@return the Birthday
 	 */
 	public LocalDate getBirthday() {
-		return this.birthday;
+	    return this.birthday;
 	}
-
+	
 	/**
-	 * @param entryDate the entryDate to set
+	 *@param entryDate the entryDate to set
 	 */
 	public StaffInfoVO setEntryDate(LocalDate entryDate) {
-		this.entryDate = entryDate;
+		this.entryDate=entryDate;
 		return this;
 	}
-
+		
 	/**
-	 * @return the EntryDate
+	 *@return the EntryDate
 	 */
 	public LocalDate getEntryDate() {
-		return this.entryDate;
+	    return this.entryDate;
 	}
-
+	
 	/**
-	 * @param termDate the termDate to set
+	 *@param termDate the termDate to set
 	 */
 	public StaffInfoVO setTermDate(LocalDate termDate) {
-		this.termDate = termDate;
+		this.termDate=termDate;
 		return this;
 	}
-
+		
 	/**
-	 * @return the TermDate
+	 *@return the TermDate
 	 */
 	public LocalDate getTermDate() {
-		return this.termDate;
+	    return this.termDate;
 	}
-
+	
 	/**
-	 * @param photo the photo to set
+	 *@param photo the photo to set
 	 */
 	public StaffInfoVO setPhoto(byte[] photo) {
-		this.photo = photo;
+		this.photo=photo;
 		return this;
 	}
-
+		
 	/**
-	 * @return the Photo
+	 *@return the Photo
 	 */
 	public byte[] getPhoto() {
-		return this.photo;
+	    return this.photo;
 	}
-
+	
 	/**
-	 * @param country the country to set
+	 *@param country the country to set
 	 */
 	public StaffInfoVO setCountry(String country) {
-		this.country = country;
+		this.country=country;
 		return this;
 	}
-
+		
 	/**
-	 * @return the Country
+	 *@return the Country
 	 */
 	public String getCountry() {
-		return this.country;
+	    return this.country;
 	}
-
+	
 	/**
-	 * @param censusRegister the censusRegister to set
+	 *@param censusRegister the censusRegister to set
 	 */
 	public StaffInfoVO setCensusRegister(String censusRegister) {
-		this.censusRegister = censusRegister;
+		this.censusRegister=censusRegister;
 		return this;
 	}
-
+		
 	/**
-	 * @return the CensusRegister
+	 *@return the CensusRegister
 	 */
 	public String getCensusRegister() {
-		return this.censusRegister;
+	    return this.censusRegister;
 	}
-
+	
 	/**
-	 * @param address the address to set
+	 *@param address the address to set
 	 */
 	public StaffInfoVO setAddress(String address) {
-		this.address = address;
+		this.address=address;
 		return this;
 	}
-
+		
 	/**
-	 * @return the Address
+	 *@return the Address
 	 */
 	public String getAddress() {
-		return this.address;
+	    return this.address;
 	}
-
+	
 	/**
-	 * @param email the email to set
+	 *@param email the email to set
 	 */
 	public StaffInfoVO setEmail(String email) {
-		this.email = email;
+		this.email=email;
 		return this;
 	}
-
+		
 	/**
-	 * @return the Email
+	 *@return the Email
 	 */
 	public String getEmail() {
-		return this.email;
+	    return this.email;
 	}
-
+	
 	/**
-	 * @param telNo the telNo to set
+	 *@param telNo the telNo to set
 	 */
 	public StaffInfoVO setTelNo(String telNo) {
-		this.telNo = telNo;
+		this.telNo=telNo;
 		return this;
 	}
-
+		
 	/**
-	 * @return the TelNo
+	 *@return the TelNo
 	 */
 	public String getTelNo() {
-		return this.telNo;
+	    return this.telNo;
 	}
-
+	
 	/**
-	 * @param post the post to set
+	 *@param post the post to set
 	 */
 	public StaffInfoVO setPost(String post) {
-		this.post = post;
+		this.post=post;
 		return this;
 	}
-
+		
 	/**
-	 * @return the Post
+	 *@return the Post
 	 */
 	public String getPost() {
-		return this.post;
+	    return this.post;
 	}
-
+	
 	/**
-	 * @param postGrade the postGrade to set
+	 *@param postGrade the postGrade to set
 	 */
 	public StaffInfoVO setPostGrade(String postGrade) {
-		this.postGrade = postGrade;
+		this.postGrade=postGrade;
 		return this;
 	}
-
+		
 	/**
-	 * @return the PostGrade
+	 *@return the PostGrade
 	 */
 	public String getPostGrade() {
-		return this.postGrade;
+	    return this.postGrade;
 	}
-
+	
 	/**
-	 * @param createBy the createBy to set
+	 *@param createBy the createBy to set
 	 */
 	public StaffInfoVO setCreateBy(String createBy) {
-		this.createBy = createBy;
+		this.createBy=createBy;
 		return this;
 	}
-
+		
 	/**
-	 * @return the CreateBy
+	 *@return the CreateBy
 	 */
 	public String getCreateBy() {
-		return this.createBy;
+	    return this.createBy;
 	}
-
+	
 	/**
-	 * @param createTime the createTime to set
+	 *@param createTime the createTime to set
 	 */
 	public StaffInfoVO setCreateTime(LocalDateTime createTime) {
-		this.createTime = createTime;
+		this.createTime=createTime;
 		return this;
 	}
-
+		
 	/**
-	 * @return the CreateTime
+	 *@return the CreateTime
 	 */
 	public LocalDateTime getCreateTime() {
-		return this.createTime;
+	    return this.createTime;
 	}
-
+	
 	/**
-	 * @param updateBy the updateBy to set
+	 *@param updateBy the updateBy to set
 	 */
 	public StaffInfoVO setUpdateBy(String updateBy) {
-		this.updateBy = updateBy;
+		this.updateBy=updateBy;
 		return this;
 	}
-
+		
 	/**
-	 * @return the UpdateBy
+	 *@return the UpdateBy
 	 */
 	public String getUpdateBy() {
-		return this.updateBy;
+	    return this.updateBy;
 	}
-
+	
 	/**
-	 * @param updateTime the updateTime to set
+	 *@param updateTime the updateTime to set
 	 */
 	public StaffInfoVO setUpdateTime(LocalDateTime updateTime) {
-		this.updateTime = updateTime;
+		this.updateTime=updateTime;
 		return this;
 	}
-
+		
 	/**
-	 * @return the UpdateTime
+	 *@return the UpdateTime
 	 */
 	public LocalDateTime getUpdateTime() {
-		return this.updateTime;
+	    return this.updateTime;
 	}
-
+	
 	/**
-	 * @param status the status to set
+	 *@param status the status to set
 	 */
 	public StaffInfoVO setStatus(Integer status) {
-		this.status = status;
+		this.status=status;
 		return this;
 	}
-
+		
 	/**
-	 * @return the Status
+	 *@return the Status
 	 */
 	public Integer getStatus() {
-		return this.status;
+	    return this.status;
 	}
-	/*---end-auto-generate-don't-update-this-area--*/
+/*---end-auto-generate-don't-update-this-area--*/
 }
