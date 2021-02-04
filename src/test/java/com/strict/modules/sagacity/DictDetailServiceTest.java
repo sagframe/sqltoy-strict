@@ -19,7 +19,7 @@ import com.strict.modules.sagacity.vo.DictDetailVO;
 
 /**
  * @project sqltoy-strict
- * @description 请在此说明类的功能
+ * @description 测试基于service的调用
  * @author zhong
  * @version v1.0, Date:2020-10-14
  * @modify 2020-10-14,修改说明
