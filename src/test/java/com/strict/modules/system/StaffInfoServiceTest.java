@@ -5,7 +5,7 @@ package com.strict.modules.system;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.sagacity.sqltoy.model.PaginationModel;
+import org.sagacity.sqltoy.model.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
@@ -34,7 +34,7 @@ public class StaffInfoServiceTest {
 	@Test
 	public void testSearch() {
 		StaffInfoVO staffInfoVO = new StaffInfoVO().setStaffName("陈");
-		PaginationModel result = staffInfoService.page(new PaginationModel(), staffInfoVO);
+		Page result = staffInfoService.page(new Page(), staffInfoVO);
 		System.err.println(JSON.toJSONString(result));
 	}
 }

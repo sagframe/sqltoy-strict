@@ -3,7 +3,7 @@
  */
 package com.strict.modules.system.service;
 
-import org.sagacity.sqltoy.model.PaginationModel;
+import org.sagacity.sqltoy.model.Page;
 
 import com.strict.modules.system.vo.OrganInfoVO;
 
@@ -27,5 +27,5 @@ public interface OrganInfoService {
 	 * @param organInfoVO
 	 * @return
 	 */
-	public PaginationModel<OrganInfoVO> search(PaginationModel page, OrganInfoVO organInfoVO);
+	public Page<OrganInfoVO> search(Page page, OrganInfoVO organInfoVO);
 }
