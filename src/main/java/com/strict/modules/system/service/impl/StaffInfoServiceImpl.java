@@ -4,7 +4,7 @@
 package com.strict.modules.system.service.impl;
 
 import org.sagacity.sqltoy.dao.SqlToyLazyDao;
-import org.sagacity.sqltoy.model.PaginationModel;
+import org.sagacity.sqltoy.model.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,7 +24,7 @@ public class StaffInfoServiceImpl implements StaffInfoService {
 	private SqlToyLazyDao sqlToyDao;
 
 	@Override
-	public PaginationModel<StaffInfoVO> page(PaginationModel pageModel, StaffInfoVO staffInfoVO) {
+	public Page<StaffInfoVO> page(Page pageModel, StaffInfoVO staffInfoVO) {
 		return sqlToyDao.findPageBySql(pageModel, "sys_findStaffInfo", staffInfoVO);
 	}
 

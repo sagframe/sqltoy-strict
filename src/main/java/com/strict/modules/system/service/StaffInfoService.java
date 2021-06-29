@@ -3,7 +3,7 @@
  */
 package com.strict.modules.system.service;
 
-import org.sagacity.sqltoy.model.PaginationModel;
+import org.sagacity.sqltoy.model.Page;
 
 import com.strict.modules.system.vo.StaffInfoVO;
 
@@ -15,5 +15,5 @@ import com.strict.modules.system.vo.StaffInfoVO;
  * @modify 2020-9-30,修改说明
  */
 public interface StaffInfoService {
-	public PaginationModel<StaffInfoVO> page(PaginationModel pageModel, StaffInfoVO staffInfoVO);
+	public Page<StaffInfoVO> page(Page pageModel, StaffInfoVO staffInfoVO);
 }

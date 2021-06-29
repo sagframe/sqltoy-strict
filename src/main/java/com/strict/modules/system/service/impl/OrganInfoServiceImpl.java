@@ -4,7 +4,7 @@
 package com.strict.modules.system.service.impl;
 
 import org.sagacity.sqltoy.dao.SqlToyLazyDao;
-import org.sagacity.sqltoy.model.PaginationModel;
+import org.sagacity.sqltoy.model.Page;
 import org.sagacity.sqltoy.model.TreeTableModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -39,7 +39,7 @@ public class OrganInfoServiceImpl implements OrganInfoService {
 	}
 
 	@Override
-	public PaginationModel<OrganInfoVO> search(PaginationModel page, OrganInfoVO organInfoVO) {
+	public Page<OrganInfoVO> search(Page page, OrganInfoVO organInfoVO) {
 		return null;
 	}
 
