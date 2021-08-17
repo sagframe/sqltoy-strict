@@ -15,9 +15,12 @@
 		<sqltoy-starter.version>5.0.11</sqltoy-starter.version>
 		<fastjson.version>1.2.76</fastjson.version>
 		<druid.version>1.2.6</druid.version>
+		<!-- 缓存翻译默认依赖ehcache -->
+		<ehcache.version>3.9.5</ehcache.version>
 		<junit-jupiter.version>5.7.2</junit-jupiter.version>
 		<junit-platform.version>1.7.2</junit-platform.version>
-		<spring.version>5.3.8</spring.version>
+		<spring.version>5.3.9</spring.version>
+		<mysql.version>8.0.26</mysql.version>
 		<aspectjweaver.version>1.9.6</aspectjweaver.version>
 		<springfox.version>3.0.0</springfox.version>
 	</properties>
@@ -109,6 +112,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -138,6 +142,7 @@
 			<groupId>org.ehcache</groupId>
 			<artifactId>ehcache</artifactId>
 			<scope>provided</scope>
+			<version>${ehcache.version}</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.slf4j</groupId>
