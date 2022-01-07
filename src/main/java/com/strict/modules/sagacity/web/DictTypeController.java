@@ -3,7 +3,6 @@
  */
 package com.strict.modules.sagacity.web;
 
-import org.sagacity.sqltoy.utils.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.strict.framework.model.Result;
+import com.strict.framework.validate.Validator;
 import com.strict.framework.web.BaseController;
 import com.strict.modules.sagacity.service.DictTypeService;
 import com.strict.modules.sagacity.vo.DictTypeVO;
@@ -47,9 +47,7 @@ public class DictTypeController extends BaseController {
 	@ApiOperation("验证字典分类是否已经存在")
 	@RequestMapping(path = ISUNIQUE, method = RequestMethod.POST)
 	public Result isUnique(@RequestBody DictTypeVO dictTypeVO) {
-		if (StringUtil.isBlank(dictTypeVO.getDictType())) {
-			return super.failure("字典分类唯一性校验必须要输入字典类型!");
-		}
+		Validator.create().notEmpty("字典类型值不能为空", dictTypeVO.getDictType()).run();
 		try {
 			boolean result = dictTypeService.isUnique(dictTypeVO);
 			return super.success(result);

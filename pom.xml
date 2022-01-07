@@ -1,30 +1,33 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.5.7</version>
+		<version>2.6.2</version>
 	</parent>
 	<groupId>com.sqltoy.quickstart</groupId>
 	<artifactId>sqltoy-strict</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<sqltoy-starter.version>5.1.18</sqltoy-starter.version>
+		<sqltoy-starter.version>5.1.23</sqltoy-starter.version>
 		<fastjson.version>1.2.78</fastjson.version>
 		<druid.version>1.2.8</druid.version>
-		<!-- 缓存翻译默认依赖ehcache -->
-		<ehcache.version>3.9.7</ehcache.version>
+		<!-- 注意缓存翻译默认依赖ehcache -->
+		<ehcache.version>3.9.9</ehcache.version>
 		<junit-jupiter.version>5.8.2</junit-jupiter.version>
 		<junit-platform.version>1.8.2</junit-platform.version>
-		<spring.version>5.3.13</spring.version>
-		<mysql.version>8.0.27</mysql.version>
+		<spring.version>5.3.14</spring.version>
 		<aspectjweaver.version>1.9.7</aspectjweaver.version>
 		<springfox.version>3.0.0</springfox.version>
 	</properties>
 	<dependencies>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.22</version>
+			<scope>provided</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
@@ -112,13 +115,13 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>${mysql.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 		</dependency>
-		<dependency> <!-- 桥接：告诉Slf4j使用Log4j2 -->
+		<dependency>
+			<!-- 桥接：告诉Slf4j使用Log4j2 -->
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-slf4j-impl</artifactId>
 			<optional>true</optional>
