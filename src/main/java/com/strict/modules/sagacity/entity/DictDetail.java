@@ -28,53 +28,46 @@ public class DictDetail implements Serializable {
 /*---begin-auto-generate-don't-update-this-area--*/	
 	/**
 	 * jdbcType:VARCHAR
-	 * 字典KEY
 	 */
 	@Id
-	@Column(name="DICT_KEY",length=50L,type=java.sql.Types.VARCHAR,nullable=false)
+	@Column(name="DICT_KEY",comment="字典KEY",length=50L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String dictKey;
 	
 	/**
 	 * jdbcType:VARCHAR
-	 * 字典类型代码
 	 */
 	@Id
-	@Column(name="DICT_TYPE",length=50L,type=java.sql.Types.VARCHAR,nullable=false)
+	@Column(name="DICT_TYPE",comment="字典类型代码",length=50L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String dictType;
 	
 	/**
 	 * jdbcType:VARCHAR
-	 * 字典值
 	 */
-	@Column(name="DICT_NAME",length=200L,type=java.sql.Types.VARCHAR,nullable=false)
+	@Column(name="DICT_NAME",comment="字典值",length=200L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String dictName;
 	
 	/**
 	 * jdbcType:DECIMAL
-	 * 显示顺序
 	 */
-	@Column(name="SHOW_INDEX",length=8L,defaultValue="1",type=java.sql.Types.INTEGER,nullable=false)
+	@Column(name="SHOW_INDEX",comment="显示顺序",length=8L,defaultValue="1",type=java.sql.Types.INTEGER,nullable=false)
 	private Integer showIndex;
 	
 	/**
 	 * jdbcType:VARCHAR
-	 * 最后修改人
 	 */
-	@Column(name="UPDATE_BY",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
+	@Column(name="UPDATE_BY",comment="最后修改人",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String updateBy;
 	
 	/**
 	 * jdbcType:DATETIME
-	 * 最后修改时间
 	 */
-	@Column(name="UPDATE_TIME",length=19L,type=java.sql.Types.DATE,nullable=false)
+	@Column(name="UPDATE_TIME",comment="最后修改时间",length=19L,type=java.sql.Types.DATE,nullable=false)
 	private LocalDateTime updateTime;
 	
 	/**
 	 * jdbcType:DECIMAL
-	 * 状态
 	 */
-	@Column(name="STATUS",length=1L,defaultValue="1",type=java.sql.Types.INTEGER,nullable=false)
+	@Column(name="STATUS",comment="状态",length=1L,defaultValue="1",type=java.sql.Types.INTEGER,nullable=false)
 	private Integer status;
 	
 	/** default constructor */

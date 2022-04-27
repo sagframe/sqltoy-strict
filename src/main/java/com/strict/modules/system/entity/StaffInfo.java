@@ -30,150 +30,129 @@ public class StaffInfo implements Serializable {
 /*---begin-auto-generate-don't-update-this-area--*/	
 	/**
 	 * jdbcType:VARCHAR
-	 * 员工ID
 	 */
 	@Id(strategy="generator",generator="org.sagacity.sqltoy.plugins.id.impl.DefaultIdGenerator")
-	@Column(name="STAFF_ID",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
+	@Column(name="STAFF_ID",comment="员工ID",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String staffId;
 	
 	/**
 	 * jdbcType:VARCHAR
-	 * 工号
 	 */
-	@Column(name="STAFF_CODE",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
+	@Column(name="STAFF_CODE",comment="工号",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String staffCode;
 	
 	/**
 	 * jdbcType:VARCHAR
-	 * 姓名
 	 */
-	@Column(name="STAFF_NAME",length=30L,type=java.sql.Types.VARCHAR,nullable=false)
+	@Column(name="STAFF_NAME",comment="姓名",length=30L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String staffName;
 	
 	/**
 	 * jdbcType:VARCHAR
-	 * 部门
 	 */
-	@Column(name="ORGAN_ID",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
+	@Column(name="ORGAN_ID",comment="部门",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String organId;
 	
 	/**
 	 * jdbcType:CHAR
-	 * 性别
 	 */
-	@Column(name="SEX_TYPE",length=1L,type=java.sql.Types.CHAR,nullable=false)
+	@Column(name="SEX_TYPE",comment="性别",length=1L,type=java.sql.Types.CHAR,nullable=false)
 	private String sexType;
 	
 	/**
 	 * jdbcType:DATE
-	 * 出生日期
 	 */
-	@Column(name="BIRTHDAY",length=10L,type=java.sql.Types.DATE,nullable=true)
+	@Column(name="BIRTHDAY",comment="出生日期",length=10L,type=java.sql.Types.DATE,nullable=true)
 	private LocalDate birthday;
 	
 	/**
 	 * jdbcType:DATE
-	 * 入职日期
 	 */
-	@Column(name="ENTRY_DATE",length=10L,type=java.sql.Types.DATE,nullable=false)
+	@Column(name="ENTRY_DATE",comment="入职日期",length=10L,type=java.sql.Types.DATE,nullable=false)
 	private LocalDate entryDate;
 	
 	/**
 	 * jdbcType:DATE
-	 * 离职日期
 	 */
-	@Column(name="TERM_DATE",length=10L,type=java.sql.Types.DATE,nullable=true)
+	@Column(name="TERM_DATE",comment="离职日期",length=10L,type=java.sql.Types.DATE,nullable=true)
 	private LocalDate termDate;
 	
 	/**
 	 * jdbcType:LONGBLOB
-	 * 照片
 	 */
-	@Column(name="PHOTO",length=2147483647L,type=java.sql.Types.BLOB,nullable=true)
+	@Column(name="PHOTO",comment="照片",length=2147483647L,type=java.sql.Types.BLOB,nullable=true)
 	private byte[] photo;
 	
 	/**
 	 * jdbcType:VARCHAR
-	 * 国家
 	 */
-	@Column(name="COUNTRY",length=10L,type=java.sql.Types.VARCHAR,nullable=true)
+	@Column(name="COUNTRY",comment="国家",length=10L,type=java.sql.Types.VARCHAR,nullable=true)
 	private String country;
 	
 	/**
 	 * jdbcType:VARCHAR
-	 * 籍贯
 	 */
-	@Column(name="CENSUS_REGISTER",length=150L,type=java.sql.Types.VARCHAR,nullable=true)
+	@Column(name="CENSUS_REGISTER",comment="籍贯",length=150L,type=java.sql.Types.VARCHAR,nullable=true)
 	private String censusRegister;
 	
 	/**
 	 * jdbcType:VARCHAR
-	 * 家庭地址
 	 */
-	@Column(name="ADDRESS",length=250L,type=java.sql.Types.VARCHAR,nullable=true)
+	@Column(name="ADDRESS",comment="家庭地址",length=250L,type=java.sql.Types.VARCHAR,nullable=true)
 	private String address;
 	
 	/**
 	 * jdbcType:VARCHAR
-	 * 邮箱
 	 */
-	@Column(name="EMAIL",length=100L,type=java.sql.Types.VARCHAR,nullable=true)
+	@Column(name="EMAIL",comment="邮箱",length=100L,type=java.sql.Types.VARCHAR,nullable=true)
 	private String email;
 	
 	/**
 	 * jdbcType:VARCHAR
-	 * 移动电话
 	 */
-	@Column(name="TEL_NO",length=20L,type=java.sql.Types.VARCHAR,nullable=true)
+	@Column(name="TEL_NO",comment="移动电话",length=20L,type=java.sql.Types.VARCHAR,nullable=true)
 	private String telNo;
 	
 	/**
 	 * jdbcType:VARCHAR
-	 * 岗位
 	 */
-	@Column(name="POST",length=20L,type=java.sql.Types.VARCHAR,nullable=true)
+	@Column(name="POST",comment="岗位",length=20L,type=java.sql.Types.VARCHAR,nullable=true)
 	private String post;
 	
 	/**
 	 * jdbcType:VARCHAR
-	 * 职位级别
 	 */
-	@Column(name="POST_GRADE",length=20L,type=java.sql.Types.VARCHAR,nullable=true)
+	@Column(name="POST_GRADE",comment="职位级别",length=20L,type=java.sql.Types.VARCHAR,nullable=true)
 	private String postGrade;
 	
 	/**
 	 * jdbcType:VARCHAR
-	 * 创建人
 	 */
-	@Column(name="CREATE_BY",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
+	@Column(name="CREATE_BY",comment="创建人",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String createBy;
 	
 	/**
 	 * jdbcType:DATETIME
-	 * 创建时间
 	 */
-	@Column(name="CREATE_TIME",length=19L,type=java.sql.Types.DATE,nullable=false)
+	@Column(name="CREATE_TIME",comment="创建时间",length=19L,type=java.sql.Types.DATE,nullable=false)
 	private LocalDateTime createTime;
 	
 	/**
 	 * jdbcType:VARCHAR
-	 * 最后修改人
 	 */
-	@Column(name="UPDATE_BY",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
+	@Column(name="UPDATE_BY",comment="最后修改人",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String updateBy;
 	
 	/**
 	 * jdbcType:DATETIME
-	 * 最后修改时间
 	 */
-	@Column(name="UPDATE_TIME",length=19L,type=java.sql.Types.DATE,nullable=false)
+	@Column(name="UPDATE_TIME",comment="最后修改时间",length=19L,type=java.sql.Types.DATE,nullable=false)
 	private LocalDateTime updateTime;
 	
 	/**
 	 * jdbcType:DECIMAL
-	 * 状态
 	 */
-	@Column(name="STATUS",length=1L,defaultValue="1",type=java.sql.Types.INTEGER,nullable=false)
+	@Column(name="STATUS",comment="状态",length=1L,defaultValue="1",type=java.sql.Types.INTEGER,nullable=false)
 	private Integer status;
 	
 	/** default constructor */

@@ -28,101 +28,87 @@ public class OrganInfo implements Serializable {
 /*---begin-auto-generate-don't-update-this-area--*/	
 	/**
 	 * jdbcType:VARCHAR
-	 * 机构ID
 	 */
 	@Id(strategy="generator",generator="org.sagacity.sqltoy.plugins.id.impl.DefaultIdGenerator")
-	@Column(name="ORGAN_ID",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
+	@Column(name="ORGAN_ID",comment="机构ID",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String organId;
 	
 	/**
 	 * jdbcType:VARCHAR
-	 * 机构名称
 	 */
-	@Column(name="ORGAN_NAME",length=100L,type=java.sql.Types.VARCHAR,nullable=false)
+	@Column(name="ORGAN_NAME",comment="机构名称",length=100L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String organName;
 	
 	/**
 	 * jdbcType:VARCHAR
-	 * 机构代码
 	 */
-	@Column(name="ORGAN_CODE",length=20L,type=java.sql.Types.VARCHAR,nullable=false)
+	@Column(name="ORGAN_CODE",comment="机构代码",length=20L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String organCode;
 	
 	/**
 	 * jdbcType:VARCHAR
-	 * 成本中心代码
 	 */
-	@Column(name="COST_NO",length=20L,type=java.sql.Types.VARCHAR,nullable=true)
+	@Column(name="COST_NO",comment="成本中心代码",length=20L,type=java.sql.Types.VARCHAR,nullable=true)
 	private String costNo;
 	
 	/**
 	 * jdbcType:VARCHAR
-	 * 父机构ID
 	 */
-	@Column(name="ORGAN_PID",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
+	@Column(name="ORGAN_PID",comment="父机构ID",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String organPid;
 	
 	/**
 	 * jdbcType:VARCHAR
-	 * 节点路径
 	 */
-	@Column(name="NODE_ROUTE",length=200L,type=java.sql.Types.VARCHAR,nullable=true)
+	@Column(name="NODE_ROUTE",comment="节点路径",length=200L,type=java.sql.Types.VARCHAR,nullable=true)
 	private String nodeRoute;
 	
 	/**
 	 * jdbcType:DECIMAL
-	 * 节点等级
 	 */
-	@Column(name="NODE_LEVEL",length=1L,type=java.sql.Types.INTEGER,nullable=true)
+	@Column(name="NODE_LEVEL",comment="节点等级",length=1L,type=java.sql.Types.INTEGER,nullable=true)
 	private Integer nodeLevel;
 	
 	/**
 	 * jdbcType:DECIMAL
-	 * 是否叶子节点
 	 */
-	@Column(name="IS_LEAF",length=1L,type=java.sql.Types.INTEGER,nullable=true)
+	@Column(name="IS_LEAF",comment="是否叶子节点",length=1L,type=java.sql.Types.INTEGER,nullable=true)
 	private Integer isLeaf;
 	
 	/**
 	 * jdbcType:DECIMAL
-	 * 显示顺序
 	 */
-	@Column(name="SHOW_INDEX",length=8L,defaultValue="1",type=java.sql.Types.INTEGER,nullable=false)
+	@Column(name="SHOW_INDEX",comment="显示顺序",length=8L,defaultValue="1",type=java.sql.Types.INTEGER,nullable=false)
 	private Integer showIndex;
 	
 	/**
 	 * jdbcType:VARCHAR
-	 * 创建人
 	 */
-	@Column(name="CREATE_BY",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
+	@Column(name="CREATE_BY",comment="创建人",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String createBy;
 	
 	/**
 	 * jdbcType:DATETIME
-	 * 创建时间
 	 */
-	@Column(name="CREATE_TIME",length=19L,type=java.sql.Types.DATE,nullable=false)
+	@Column(name="CREATE_TIME",comment="创建时间",length=19L,type=java.sql.Types.DATE,nullable=false)
 	private LocalDateTime createTime;
 	
 	/**
 	 * jdbcType:VARCHAR
-	 * 最后修改人
 	 */
-	@Column(name="UPDATE_BY",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
+	@Column(name="UPDATE_BY",comment="最后修改人",length=22L,type=java.sql.Types.VARCHAR,nullable=false)
 	private String updateBy;
 	
 	/**
 	 * jdbcType:DATETIME
-	 * 最后修改时间
 	 */
-	@Column(name="UPDATE_TIME",length=19L,type=java.sql.Types.DATE,nullable=false)
+	@Column(name="UPDATE_TIME",comment="最后修改时间",length=19L,type=java.sql.Types.DATE,nullable=false)
 	private LocalDateTime updateTime;
 	
 	/**
 	 * jdbcType:DECIMAL
-	 * 状态
 	 */
-	@Column(name="STATUS",length=1L,defaultValue="1",type=java.sql.Types.INTEGER,nullable=false)
+	@Column(name="STATUS",comment="状态",length=1L,defaultValue="1",type=java.sql.Types.INTEGER,nullable=false)
 	private Integer status;
 	
 	/** default constructor */
