@@ -4,19 +4,18 @@
 package com.strict.modules.sagacity.vo;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
-
-import io.swagger.annotations.ApiModel;
-import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import lombok.experimental.Accessors;
+import java.time.LocalDateTime;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * @project sqltoy-strict
+ * @author zhongxuchen
  * @version 1.0.0
  * @description sag_dict_type,字典分类表  
  */
-@ApiModel(value="DictTypeVO",description="字典分类表")
+@Schema(name="DictTypeVO",description="字典分类表")
 @Data
 @Accessors(chain = true)
 public class DictTypeVO implements Serializable {

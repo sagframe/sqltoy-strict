@@ -16,6 +16,7 @@ import java.util.List;
 
 /**
  * @project sqltoy-strict
+ * @author zhongxuchen
  * @version 1.0.0
  * Table: sag_dict_type,Remark:字典分类表  
  */

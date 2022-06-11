@@ -3,11 +3,10 @@
  */
 package com.strict.modules.sagacity.service.impl;
 
-import org.sagacity.sqltoy.dao.SqlToyLazyDao;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.strict.framework.service.BaseService;
 import com.strict.modules.sagacity.entity.DictType;
 import com.strict.modules.sagacity.service.DictTypeService;
 import com.strict.modules.sagacity.vo.DictTypeVO;
@@ -20,22 +19,19 @@ import com.strict.modules.sagacity.vo.DictTypeVO;
  * @modify 2020-9-30,修改说明
  */
 @Service("dictTypeService")
-public class DictTypeServiceImpl implements DictTypeService {
-
-	@Autowired
-	private SqlToyLazyDao sqlToyDao;
+public class DictTypeServiceImpl extends BaseService implements DictTypeService {
 
 	@Transactional
 	public void save(DictTypeVO dictTypeVO) {
-		DictType dictType = sqlToyDao.convertType(dictTypeVO, DictType.class);
+		DictType dictType = lazyDao.convertType(dictTypeVO, DictType.class);
 		dictType.setStatus(1);
-		sqlToyDao.save(dictType);
+		lazyDao.save(dictType);
 	}
 
 	@Override
 	public boolean isUnique(DictTypeVO dictTypeVO) {
-		DictType dictType = sqlToyDao.convertType(dictTypeVO, DictType.class);
-		return sqlToyDao.isUnique(dictType, "dictType");
+		DictType dictType = lazyDao.convertType(dictTypeVO, DictType.class);
+		return lazyDao.isUnique(dictType, "dictType");
 	}
 
 }

@@ -4,19 +4,18 @@
 package com.strict.modules.sagacity.vo;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
-
-import io.swagger.annotations.ApiModel;
-import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import lombok.experimental.Accessors;
+import java.time.LocalDateTime;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 /**
  * @project sqltoy-strict
+ * @author zhongxuchen
  * @version 1.0.0
  * @description sag_dict_detail,字典明细表  
  */
-@ApiModel(value="DictDetailVO",description="字典明细表")
+@Schema(name="DictDetailVO",description="字典明细表")
 @Data
 @Accessors(chain = true)
 public class DictDetailVO implements Serializable {
@@ -70,4 +69,9 @@ public class DictDetailVO implements Serializable {
 	private Integer status;
 	
 /*---end-auto-generate-don't-update-this-area--*/	
+	
+	/**
+	 * 在实体类中扩展一个附加属性
+	 */
+	private String dictTypeName;
 }

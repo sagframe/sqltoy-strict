@@ -3,11 +3,10 @@
  */
 package com.strict.modules.system.service.impl;
 
-import org.sagacity.sqltoy.dao.SqlToyLazyDao;
 import org.sagacity.sqltoy.model.Page;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.strict.framework.service.BaseService;
 import com.strict.modules.system.service.StaffInfoService;
 import com.strict.modules.system.vo.StaffInfoVO;
 
@@ -19,13 +18,11 @@ import com.strict.modules.system.vo.StaffInfoVO;
  * @modify 2020-9-30,修改说明
  */
 @Service("staffInfoService")
-public class StaffInfoServiceImpl implements StaffInfoService {
-	@Autowired
-	private SqlToyLazyDao sqlToyDao;
+public class StaffInfoServiceImpl extends BaseService implements StaffInfoService {
 
 	@Override
 	public Page<StaffInfoVO> page(Page pageModel, StaffInfoVO staffInfoVO) {
-		return sqlToyDao.findPageBySql(pageModel, "sys_findStaffInfo", staffInfoVO);
+		return lazyDao.findPageBySql(pageModel, "sys_findStaffInfo", staffInfoVO);
 	}
 
 }

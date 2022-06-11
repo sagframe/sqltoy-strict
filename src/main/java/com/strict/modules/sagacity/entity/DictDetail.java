@@ -13,6 +13,7 @@ import java.time.LocalDateTime;
 
 /**
  * @project sqltoy-strict
+ * @author zhongxuchen
  * @version 1.0.0
  * Table: sag_dict_detail,Remark:字典明细表  
  */
@@ -81,6 +82,7 @@ public class DictDetail implements Serializable {
 		this.dictType=dictType;
 	}
 /*---end-auto-generate-don't-update-this-area--*/
+	
 	/**
 	 * 在实体类中扩展一个附加属性
 	 */
