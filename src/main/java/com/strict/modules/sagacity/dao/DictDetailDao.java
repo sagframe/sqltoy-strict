@@ -6,7 +6,7 @@ package com.strict.modules.sagacity.dao;
 import java.util.List;
 
 import org.sagacity.sqltoy.model.EntityQuery;
-import org.sagacity.sqltoy.support.SqlToyDaoSupport;
+import org.sagacity.sqltoy.support.SpringDaoSupport;
 import org.springframework.stereotype.Repository;
 
 import com.strict.modules.sagacity.entity.DictDetail;
@@ -20,7 +20,7 @@ import com.strict.modules.sagacity.vo.DictDetailVO;
  * @modify 2020-10-13,修改说明
  */
 @Repository("dictDetailDao")
-public class DictDetailDao extends SqlToyDaoSupport {
+public class DictDetailDao extends SpringDaoSupport {
 	/**
 	 * @TODO 根据字典类别获取字典明细数据
 	 * @param dictType
