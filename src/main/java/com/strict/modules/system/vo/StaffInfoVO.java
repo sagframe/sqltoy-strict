@@ -7,7 +7,6 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-import io.swagger.annotations.ApiModel;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import lombok.experimental.Accessors;
@@ -17,7 +16,7 @@ import lombok.experimental.Accessors;
  * @version 1.0.0
  * @description sys_staff_info,员工信息表
  */
-@ApiModel(value = "StaffInfoVO", description = "员工信息表")
+@Schema(name = "StaffInfoVO", description = "员工信息表")
 @Data
 @Accessors(chain = true)
 public class StaffInfoVO implements Serializable {
@@ -27,133 +26,133 @@ public class StaffInfoVO implements Serializable {
 	 */
 	private static final long serialVersionUID = 7194861473539798913L;
 
-	/*---begin-auto-generate-don't-update-this-area--*/	
+	/*---begin-auto-generate-don't-update-this-area--*/
 	/**
 	 * 员工ID
 	 */
-	@Schema(name="staffId",description="员工ID",nullable=false)
+	@Schema(name = "staffId", description = "员工ID", nullable = false)
 	private String staffId;
-	
+
 	/**
 	 * 工号
 	 */
-	@Schema(name="staffCode",description="工号",nullable=false)
+	@Schema(name = "staffCode", description = "工号", nullable = false)
 	private String staffCode;
-	
+
 	/**
 	 * 姓名
 	 */
-	@Schema(name="staffName",description="姓名",nullable=false)
+	@Schema(name = "staffName", description = "姓名", nullable = false)
 	private String staffName;
-	
+
 	/**
 	 * 部门
 	 */
-	@Schema(name="organId",description="部门",nullable=false)
+	@Schema(name = "organId", description = "部门", nullable = false)
 	private String organId;
-	
+
 	/**
 	 * 性别
 	 */
-	@Schema(name="sexType",description="性别",nullable=false)
+	@Schema(name = "sexType", description = "性别", nullable = false)
 	private String sexType;
-	
+
 	/**
 	 * 出生日期
 	 */
-	@Schema(name="birthday",description="出生日期",nullable=true)
+	@Schema(name = "birthday", description = "出生日期", nullable = true)
 	private LocalDate birthday;
-	
+
 	/**
 	 * 入职日期
 	 */
-	@Schema(name="entryDate",description="入职日期",nullable=false)
+	@Schema(name = "entryDate", description = "入职日期", nullable = false)
 	private LocalDate entryDate;
-	
+
 	/**
 	 * 离职日期
 	 */
-	@Schema(name="termDate",description="离职日期",nullable=true)
+	@Schema(name = "termDate", description = "离职日期", nullable = true)
 	private LocalDate termDate;
-	
+
 	/**
 	 * 照片
 	 */
-	@Schema(name="photo",description="照片",nullable=true)
+	@Schema(name = "photo", description = "照片", nullable = true)
 	private byte[] photo;
-	
+
 	/**
 	 * 国家
 	 */
-	@Schema(name="country",description="国家",nullable=true)
+	@Schema(name = "country", description = "国家", nullable = true)
 	private String country;
-	
+
 	/**
 	 * 籍贯
 	 */
-	@Schema(name="censusRegister",description="籍贯",nullable=true)
+	@Schema(name = "censusRegister", description = "籍贯", nullable = true)
 	private String censusRegister;
-	
+
 	/**
 	 * 家庭地址
 	 */
-	@Schema(name="address",description="家庭地址",nullable=true)
+	@Schema(name = "address", description = "家庭地址", nullable = true)
 	private String address;
-	
+
 	/**
 	 * 邮箱
 	 */
-	@Schema(name="email",description="邮箱",nullable=true)
+	@Schema(name = "email", description = "邮箱", nullable = true)
 	private String email;
-	
+
 	/**
 	 * 移动电话
 	 */
-	@Schema(name="telNo",description="移动电话",nullable=true)
+	@Schema(name = "telNo", description = "移动电话", nullable = true)
 	private String telNo;
-	
+
 	/**
 	 * 岗位
 	 */
-	@Schema(name="post",description="岗位",nullable=true)
+	@Schema(name = "post", description = "岗位", nullable = true)
 	private String post;
-	
+
 	/**
 	 * 职位级别
 	 */
-	@Schema(name="postGrade",description="职位级别",nullable=true)
+	@Schema(name = "postGrade", description = "职位级别", nullable = true)
 	private String postGrade;
-	
+
 	/**
 	 * 创建人
 	 */
-	@Schema(name="createBy",description="创建人",nullable=false)
+	@Schema(name = "createBy", description = "创建人", nullable = false)
 	private String createBy;
-	
+
 	/**
 	 * 创建时间
 	 */
-	@Schema(name="createTime",description="创建时间",nullable=false)
+	@Schema(name = "createTime", description = "创建时间", nullable = false)
 	private LocalDateTime createTime;
-	
+
 	/**
 	 * 最后修改人
 	 */
-	@Schema(name="updateBy",description="最后修改人",nullable=false)
+	@Schema(name = "updateBy", description = "最后修改人", nullable = false)
 	private String updateBy;
-	
+
 	/**
 	 * 最后修改时间
 	 */
-	@Schema(name="updateTime",description="最后修改时间",nullable=false)
+	@Schema(name = "updateTime", description = "最后修改时间", nullable = false)
 	private LocalDateTime updateTime;
-	
+
 	/**
 	 * 状态
 	 */
-	@Schema(name="status",description="状态",nullable=false)
+	@Schema(name = "status", description = "状态", nullable = false)
 	private Integer status;
-	
-/*---end-auto-generate-don't-update-this-area--*/
+
+	/*---end-auto-generate-don't-update-this-area--*/
 	private String organName;
 }

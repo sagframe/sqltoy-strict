@@ -15,8 +15,8 @@ import com.strict.framework.web.BaseController;
 import com.strict.modules.sagacity.service.DictTypeService;
 import com.strict.modules.sagacity.vo.DictTypeVO;
 
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 /**
  * @project sqltoy-strict
@@ -25,14 +25,14 @@ import io.swagger.annotations.ApiOperation;
  * @version v1.0, Date:2020-9-30
  * @modify 2020-9-30,修改说明
  */
-@Api(tags = "数据字典信息维护")
+@Tag(name = "数据字典信息维护")
 @RestController
 @RequestMapping("/sagacity/dictType")
 public class DictTypeController extends BaseController {
 	@Autowired
 	private DictTypeService dictTypeService;
 
-	@ApiOperation("新增字典分类信息")
+	@Operation(summary = "新增字典分类信息")
 	@RequestMapping(path = ADD, method = RequestMethod.POST)
 	public Result save(@RequestBody DictTypeVO dictTypeVO) {
 		try {
@@ -44,7 +44,7 @@ public class DictTypeController extends BaseController {
 		return super.failure("新建字典分类:{} 发生错误!", dictTypeVO.getDictType());
 	}
 
-	@ApiOperation("验证字典分类是否已经存在")
+	@Tag(name = "验证字典分类是否已经存在")
 	@RequestMapping(path = ISUNIQUE, method = RequestMethod.POST)
 	public Result isUnique(@RequestBody DictTypeVO dictTypeVO) {
 		Validator.create().notEmpty("字典类型值不能为空", dictTypeVO.getDictType()).run();

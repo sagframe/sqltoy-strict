@@ -15,8 +15,8 @@ import com.strict.framework.web.BaseController;
 import com.strict.modules.system.service.StaffInfoService;
 import com.strict.modules.system.vo.StaffInfoVO;
 
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 /**
  * @project sqltoy-strict
@@ -25,14 +25,14 @@ import io.swagger.annotations.ApiOperation;
  * @version v1.0, Date:2020-10-9
  * @modify 2020-10-9,修改说明
  */
-@Api(tags = "员工信息维护和查询")
+@Tag(name = "员工信息维护和查询")
 @RestController
 @RequestMapping("/system/staffInfo")
 public class StaffInfoController extends BaseController {
 	@Autowired
 	private StaffInfoService staffInfoService;
 
-	@ApiOperation("分页查询员工信息")
+	@Operation(summary = "分页查询员工信息")
 	@RequestMapping(path = SEARCH, method = RequestMethod.POST)
 	public Result search(@RequestParam Page pageModel, @RequestParam StaffInfoVO staffInfoVO) {
 		try {
