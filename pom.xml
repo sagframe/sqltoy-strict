@@ -13,7 +13,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<sqltoy-starter.version>5.2.29</sqltoy-starter.version>
-		<fastjson.version>2.0.19</fastjson.version>
+		<fastjson.version>2.0.22</fastjson.version>
 		<druid.version>1.2.15</druid.version>
 		<!-- 注意缓存翻译默认依赖ehcache -->
 		<ehcache.version>3.10.8</ehcache.version>
@@ -22,6 +22,7 @@
 		<spring.version>5.3.24</spring.version>
 		<knife4j.version>3.0.3</knife4j.version>
 		<springdoc.version>1.6.12</springdoc.version>
+		<mysql.version>8.0.31</mysql.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -110,8 +111,9 @@
 		</dependency>
 
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<version>${mysql.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
