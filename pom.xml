@@ -12,16 +12,16 @@
 	<version>1.0.0-SNAPSHOT</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<sqltoy-starter.version>5.2.39</sqltoy-starter.version>
-		<fastjson.version>2.0.25</fastjson.version>
+		<sqltoy-starter.version>5.2.42</sqltoy-starter.version>
+		<fastjson.version>2.0.26</fastjson.version>
 		<druid.version>1.2.16</druid.version>
 		<!-- 注意缓存翻译默认依赖ehcache -->
 		<ehcache.version>3.10.8</ehcache.version>
 		<junit-jupiter.version>5.9.2</junit-jupiter.version>
 		<junit-platform.version>1.9.2</junit-platform.version>
-		<spring.version>5.3.25</spring.version>
+		<spring.version>5.3.26</spring.version>
 		<knife4j.version>3.0.3</knife4j.version>
-		<springdoc.version>1.6.12</springdoc.version>
+		<springdoc.version>1.6.15</springdoc.version>
 		<mysql.version>8.0.32</mysql.version>
 	</properties>
 	<dependencies>
