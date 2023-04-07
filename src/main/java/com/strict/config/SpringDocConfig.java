@@ -20,7 +20,7 @@ import io.swagger.v3.oas.models.info.License;
  */
 @Configuration
 public class SpringDocConfig {
-	// Swagger的访问路径为:port/swagger-ui/index.html 或port/swagger-ui/
+	// Swagger的访问路径为:port/swagger-ui/index.html
 
 	@Bean
 	public GroupedOpenApi userApi() {
