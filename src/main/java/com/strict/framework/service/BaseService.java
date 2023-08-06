@@ -1,6 +1,6 @@
 package com.strict.framework.service;
 
-import org.sagacity.sqltoy.dao.SqlToyLazyDao;
+import org.sagacity.sqltoy.dao.LightDao;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,5 +20,5 @@ public class BaseService {
 	 * 为service提供统一的Dao操作
 	 */
 	@Autowired(required = false)
-	protected SqlToyLazyDao lazyDao;
+	protected LightDao lightDao;
 }

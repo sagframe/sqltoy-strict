@@ -23,15 +23,15 @@ public class DictTypeServiceImpl extends BaseService implements DictTypeService 
 
 	@Transactional
 	public void save(DictTypeVO dictTypeVO) {
-		DictType dictType = lazyDao.convertType(dictTypeVO, DictType.class);
+		DictType dictType = lightDao.convertType(dictTypeVO, DictType.class);
 		dictType.setStatus(1);
-		lazyDao.save(dictType);
+		lightDao.save(dictType);
 	}
 
 	@Override
 	public boolean isUnique(DictTypeVO dictTypeVO) {
-		DictType dictType = lazyDao.convertType(dictTypeVO, DictType.class);
-		return lazyDao.isUnique(dictType, "dictType");
+		DictType dictType = lightDao.convertType(dictTypeVO, DictType.class);
+		return lightDao.isUnique(dictType, "dictType");
 	}
 
 }

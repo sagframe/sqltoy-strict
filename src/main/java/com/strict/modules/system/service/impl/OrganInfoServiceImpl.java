@@ -29,10 +29,10 @@ public class OrganInfoServiceImpl extends BaseService implements OrganInfoServic
 	@Transactional
 	public void save(OrganInfoVO organInfoVO) {
 		// 将vo转为pojo
-		OrganInfo organInfo = lazyDao.convertType(organInfoVO, OrganInfo.class);
-		lazyDao.save(organInfo);
+		OrganInfo organInfo = lightDao.convertType(organInfoVO, OrganInfo.class);
+		lightDao.save(organInfo);
 		// 构造节点路径、层级、是否叶子节点标志
-		lazyDao.wrapTreeTableRoute(new TreeTableModel(organInfo).pidField("organPid"));
+		lightDao.wrapTreeTableRoute(new TreeTableModel(organInfo).pidField("organPid"));
 	}
 
 	@Override

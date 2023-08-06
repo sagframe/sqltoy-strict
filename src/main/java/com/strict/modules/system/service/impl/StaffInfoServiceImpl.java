@@ -22,7 +22,7 @@ public class StaffInfoServiceImpl extends BaseService implements StaffInfoServic
 
 	@Override
 	public Page<StaffInfoVO> page(Page pageModel, StaffInfoVO staffInfoVO) {
-		return lazyDao.findPageBySql(pageModel, "sys_findStaffInfo", staffInfoVO);
+		return lightDao.findPage(pageModel, "sys_findStaffInfo", staffInfoVO, StaffInfoVO.class);
 	}
 
 }
