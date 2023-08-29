@@ -29,5 +29,5 @@
 * 可以完成字典分类的维护和唯一性验证，参见:DictTypeController
 
 # 规则说明
-## sqltoy常规情况下通过SqlToyLazyDao来避免开发者写转接式的dao
+## sqltoy常规情况下通过LightDao来避免开发者写转接式的dao
 * 转接式的Dao就是本质可以通过统一的dao来完成的，为了保持service、dao这种结构形态，刻意写出一个dao然后其中不包含任何的附加逻辑只做一个转调
