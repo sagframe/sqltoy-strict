@@ -21,7 +21,7 @@
 		<junit-platform.version>1.10.1</junit-platform.version>
 		<spring.version>5.3.30</spring.version>
 		<knife4j.version>3.0.3</knife4j.version>
-		<springdoc.version>1.6.15</springdoc.version>
+		<springdoc.version>1.7.0</springdoc.version>
 		<mysql.version>8.0.33</mysql.version>
 	</properties>
 	<dependencies>
