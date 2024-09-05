@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson2.JSON;
 import com.strict.StrictApplication;
 import com.strict.modules.GlobalConstants.DictTypes;
 import com.strict.modules.sagacity.service.DictDetailService;
