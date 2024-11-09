@@ -6,13 +6,10 @@ package com.strict.modules.sagacity;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import com.alibaba.fastjson2.JSON;
-import com.strict.StrictApplication;
 import com.strict.modules.GlobalConstants.DictTypes;
 import com.strict.modules.sagacity.service.DictDetailService;
 import com.strict.modules.sagacity.vo.DictDetailVO;
@@ -24,8 +21,7 @@ import com.strict.modules.sagacity.vo.DictDetailVO;
  * @version v1.0, Date:2020-10-14
  * @modify 2020-10-14,修改说明
  */
-@ExtendWith(SpringExtension.class)
-@SpringBootTest(classes = StrictApplication.class)
+@SpringBootTest
 public class DictDetailServiceTest {
 	@Autowired
 	DictDetailService dictDetailService;

@@ -1,9 +1,16 @@
 package com.strict;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.core.env.Environment;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 /**
  * 
@@ -16,11 +23,21 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @SpringBootApplication
 @ComponentScan(basePackages = { "com.strict.config", "com.strict.modules" })
 @EnableTransactionManagement
-public class StrictApplication {
+@EnableWebMvc
+public class StrictApplication extends SpringBootServletInitializer {
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
-		SpringApplication.run(StrictApplication.class, args);
+	public static void main(String[] args) throws UnknownHostException {
+		ConfigurableApplicationContext application = SpringApplication.run(StrictApplication.class, args);
+		Environment env = application.getEnvironment();
+		String ip = InetAddress.getLocalHost().getHostAddress();
+		String port = env.getProperty("server.port");
+		port = (port == null) ? "8080" : port;
+		String path = env.getProperty("server.servlet.context-path");
+		System.out.println("\n----------------------------------------------------------\n\t"
+				+ "Application is running! Access URLs:\n\tLocal: \t\thttp://localhost:" + port + path + "/\n\t"
+				+ "External: \thttp://" + ip + ":" + port + path + "/\n"
+				+ "----------------------------------------------------------");
 	}
 }

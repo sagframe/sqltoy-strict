@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.strict.framework.model.Result;
+import com.strict.framework.model.ResultCode;
 
 /**
  * @project sqltoy-strict
@@ -43,7 +44,7 @@ public class BaseController {
 	 * @return
 	 */
 	protected <T> Result<T> success(T data) {
-		return new Result<T>().setMessage("成功").setCode("1").setData(data);
+		return new Result<T>().setMessage("成功").setCode(ResultCode.SUCCESS).setData(data);
 	}
 
 	/**
@@ -54,6 +55,6 @@ public class BaseController {
 	 * @return
 	 */
 	protected <T> Result<T> failure(String errorMsg, Object... args) {
-		return new Result<T>().setMessage(StringUtil.fillArgs(errorMsg, args)).setCode("0");
+		return new Result<T>().setMessage(StringUtil.fillArgs(errorMsg, args)).setCode(ResultCode.ERROR);
 	}
 }

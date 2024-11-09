@@ -32,6 +32,7 @@ public class StaffInfoController extends BaseController {
 	@Autowired
 	private StaffInfoService staffInfoService;
 
+	
 	@Operation(summary = "分页查询员工信息")
 	@RequestMapping(path = SEARCH, method = RequestMethod.POST)
 	public Result search(@RequestParam Page pageModel, @RequestParam StaffInfoVO staffInfoVO) {

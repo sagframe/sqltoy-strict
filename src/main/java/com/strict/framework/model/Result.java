@@ -19,6 +19,11 @@ public class Result<T> implements Serializable {
 	private static final long serialVersionUID = -316607953346586682L;
 
 	/**
+	 * 处理状态（true:成功、false：失败）
+	 */
+	private boolean success;
+
+	/**
 	 * 返回码
 	 */
 	private String code;
@@ -52,6 +57,11 @@ public class Result<T> implements Serializable {
 		return this;
 	}
 
+	public Result<T> success(boolean success) {
+		this.success = success;
+		return this;
+	}
+
 	/**
 	 * @return the message
 	 */
@@ -65,6 +75,10 @@ public class Result<T> implements Serializable {
 	public Result<T> setMessage(String message) {
 		this.message = message;
 		return this;
+	}
+
+	public boolean isSuccess() {
+		return success;
 	}
 
 	/**
@@ -82,4 +96,15 @@ public class Result<T> implements Serializable {
 		return this;
 	}
 
+	public static Result error(String code, String message) {
+		return new Result().setCode(code).success(false).setMessage(message);
+	}
+
+	public static <T> Result success(T data) {
+		Result<T> result = new Result<T>();
+		result.setData(data);
+		result.success(true);
+		result.setCode(ResultCode.SUCCESS);
+		return result;
+	}
 }
