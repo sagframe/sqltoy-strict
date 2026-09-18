@@ -20,11 +20,12 @@
 		<ehcache.version>3.12.0</ehcache.version>
 		<junit-jupiter.version>6.1.3</junit-jupiter.version>
 		<junit-platform.version>6.1.3</junit-platform.version>
-		<spring.version>7.0.9</spring.version>
+		<!-- 覆盖Boot默认的spring-framework版本(7.0.2),确保全部spring构件统一为7.0.9 -->
+		<spring-framework.version>7.0.9</spring-framework.version>
 		<lombok.version>1.18.48</lombok.version>
-		<hibernate-validator.version>9.1.0.Final</hibernate-validator.version>
+		<hibernate-validator.version>9.1.3.Final</hibernate-validator.version>
 		<jakarta.validation-api.version>3.1.1</jakarta.validation-api.version>
-		<springdoc-openapi-webui.version>2.8.17</springdoc-openapi-webui.version>
+		<springdoc-openapi-webui.version>3.1.1</springdoc-openapi-webui.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -176,12 +177,12 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
-			<version>${spring.version}</version>
+			<version>${spring-framework.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
-			<version>${spring.version}</version>
+			<version>${spring-framework.version}</version>
 		</dependency>
 	</dependencies>
 	<build>
